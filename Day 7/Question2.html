@@ -7,8 +7,8 @@
 </head>
 <body>
 
-    <label for="">Enter Your Income</label><br>
-    <input type="text" id="inc" placeholder="Enter Number">
+    <label for="">Enter Number</label><br>
+    <input type="text" id="number" placeholder="Enter Number">
 
     <h1 id="ans"></h1>
     
@@ -17,31 +17,35 @@
 
 <script>
 
-    let a = document.getElementById("inc").value
+    let a = document.getElementById("number").value
 
     if(a == ""){
         document.getElementById("ans").innerHTML = ""
     }
     else if (a >=0 && a <= 10000) {
         let b = (a * 5) / 100
-        document.getElementById("ans").innerHTML = "Tax = "+b
-
+        let c = a - b
+        document.getElementById("ans").innerHTML = "Tax = "+ b + "<br> Main Amount = "+ c;
     }
     else if (a >=10001 && a < 20000) {
         let b = (a * 10) / 100
-        document.getElementById("ans").innerHTML = b
+        let c = a - b
+        document.getElementById("ans").innerHTML = "Tax = "+ b + "<br> Main Amount = "+ c;
     }
     else if (a >=20001 && a < 30000) {
         let b = (a * 15) / 100
-        document.getElementById("ans").innerHTML = b
+        let c = a - b
+        document.getElementById("ans").innerHTML = "Tax = "+ b + "<br> Main Amount = "+ c;
     }
     else if (a >=30001 && a < 40000) {
         let b = (a * 20) / 100
-        document.getElementById("ans").innerHTML = b
+        let c = a - b
+        document.getElementById("ans").innerHTML = "Tax = "+ b + "<br> Main Amount = "+ c;
     }
     else {
         let b = (a * 25) / 100
-        document.getElementById("ans").innerHTML = b
-    }
+        let c = a - b
+        document.getElementById("ans").innerHTML = "Tax = "+ b + "<br> Main Amount = "+ c;
+    }
 
 </script>
