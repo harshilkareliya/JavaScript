@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=6r87, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>Basic salary</h2>
+    <input type="text" id="a" placeholder="Amount">
+    <h2>Bonus amount</h2>
+    <input type="text" id="b" placeholder="Amount">
+    <h2>Housing allowance</h2>
+    <input type="text" id="c" placeholder="Amount">
+    <h2>Deduct paid leave days</h2>
+    <input type="text" id="d" placeholder="Amount">
+    <h2>Deduct income tax</h2>
+    <input type="text" id="e" placeholder="Amount">
+    <h2>Deduct medical insurance</h2>
+    <input type="text" id="f" placeholder="Amount">
+    <h2>Deduct Provident Fund (PF)</h2>
+    <input type="text" id="g" placeholder="Amount">
+
+    <h1>Total Salary :- <span id="total"></span></h1>
+
+</body>
+</html>
+
+<script>
+
+    let a = document.getElementById("a").value
+    let b = document.getElementById("b").value
+    let c = document.getElementById("c").value
+    let d = document.getElementById("d").value
+    let e = document.getElementById("e").value
+    let f = document.getElementById("f").value
+    let g = document.getElementById("g").value
+
+    let h = +a + +b + +c- +d- +e- +f- +g
+
+    document.getElementById("total").innerText=h
+</script>

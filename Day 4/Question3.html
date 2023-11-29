@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <center>
+
+        <h2>Principal Amount :- </h2>
+        <input type="text" placeholder="amount" id="amt">
+
+        <h2>Rate of intrest :- </h2>
+        <input type="text" placeholder="amount" id="int">
+
+        <h2>Time period :- </h2>
+        <input type="text" placeholder="amount" id="time">
+
+        <h2>Intrest Amount :- <span id="amtint"></span></h2>
+        <h2>Last Amount :- <span id="total"></span></h2>
+
+    </center>
+
+</body>
+</html>
+<script>
+
+    let a = document.getElementById("amt").value
+    let b = document.getElementById("int").value
+    let c = document.getElementById("time").value
+    
+    let d = (a*b*c)/100
+
+    document.getElementById("amtint").innerHTML=d
+    document.getElementById("total").innerHTML=+a + +d
+
+    
+
+
+</script>

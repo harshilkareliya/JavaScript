@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Assignment Operators</h1>
+    <h2>A :- <span id="a"></span>
+        <br> Incrimeted Value :- <span id="ans1"></span></h2>
+    <h2>Add :- <span id="com"></span></h2>
+
+</body>
+</html>
+<script>
+    let a = 10
+
+    document.getElementById("a").innerText=a++
+    document.getElementById("ans1").innerText=a
+
+    a+=90
+    document.getElementById("com").innerText=a
+
+    console.log(a-=5)
+</script>

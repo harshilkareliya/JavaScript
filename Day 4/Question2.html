@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        
+    <label for="">First Item</label> <br>
+    <input type="text" placeholder="enter value" id="f1"> <br><br>
+
+    <label for="">Second Item</label> <br>
+    <input type="text" placeholder="enter value" id="f2"> <br><br>
+
+    <label for="">Third Item</label> <br>
+    <input type="text" placeholder="enter value" id="f3"> <br><br>
+
+    <label for="">Fourth Item</label> <br>
+    <input type="text" placeholder="enter value" id="f4"> <br><br>
+   
+    <label for="">Fourth Item</label> <br>
+    <input type="text" placeholder="enter value" id="f5"> <br><br>
+
+    <label for="">GST</label>
+    <input type="text" placeholder="enter value" id="gst"> <br><br>
+
+    <h1>Total item price = <span id="ans"></span></h1>
+    <h1>GST Amount = <span id="ansgst"></span></h1>
+    <h1>Total Amount :- <span id="total"></span></h1>
+</body>
+</html>
+<script>
+    let a=document.getElementById("f1").value
+    let b=document.getElementById("f2").value
+    let c=document.getElementById("f3").value
+    let d=document.getElementById("f4").value
+    let e=document.getElementById("f5").value
+    
+    let f = + a + + b + + c + + d + + e
+    let g = document.getElementById("gst").value
+    let h = (f*g)/100
+
+    document.getElementById("ans").innerText=f
+    document.getElementById("ansgst").innerText=h
+    document.getElementById("total").innerText=f+h
+</script>
