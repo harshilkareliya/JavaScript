@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <label for="">Enter Your Income</label><br>
+    <input type="text" id="inc" placeholder="Enter Number">
+
+    <h1 id="ans"></h1>
+    
+</body>
+</html>
+
+<script>
+
+    let a = document.getElementById("inc").value
+
+    if(a == ""){
+        document.getElementById("ans").innerHTML = ""
+    }
+    else if (a >=0 && a <= 10000) {
+        let b = (a * 5) / 100
+        document.getElementById("ans").innerHTML = "Tax = "+b
+
+    }
+    else if (a >=10001 && a < 20000) {
+        let b = (a * 10) / 100
+        document.getElementById("ans").innerHTML = b
+    }
+    else if (a >=20001 && a < 30000) {
+        let b = (a * 15) / 100
+        document.getElementById("ans").innerHTML = b
+    }
+    else if (a >=30001 && a < 40000) {
+        let b = (a * 20) / 100
+        document.getElementById("ans").innerHTML = b
+    }
+    else {
+        let b = (a * 25) / 100
+        document.getElementById("ans").innerHTML = b
+    }
+
+</script>
