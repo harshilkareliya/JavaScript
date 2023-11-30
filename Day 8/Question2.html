@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <label for="">Enter Your Hight</label><br>
+    <input type="text" id="hight" placeholder="Enter The age"> <br><br>
+
+    <label for="">Enter Your Weight</label><br>
+    <input type="text" id="weight" placeholder="Enter The age">
+
+    <h1 id="answer"></h1>
+    
+</body>
+</html>
+
+<script>
+
+    let h = document.getElementById("hight").value
+    let w = document.getElementById("weight").value
+
+    let a = w / (h * h)
+    console.log(a)
+
+    if (h === "" & w === ""){
+        document.getElementById("answer").innerHTML=""
+    }
+    else{
+        if(a < 18.5){
+        document.getElementById("answer").innerHTML="Underweight"
+    }
+    else if (a > 18.5 && a <= 25){
+        document.getElementById("answer").innerHTML="Normal weight"
+    }
+    else if(a > 25 && a <= 29.9){
+        document.getElementById("answer").innerHTML="Overweight"
+    }
+    else{
+        document.getElementById("answer").innerHTML="Obese"
+    }
+
+}
+
+</script>
