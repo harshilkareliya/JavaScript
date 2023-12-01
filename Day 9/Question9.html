@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <label for=""><h2>Enter First Side</h2></label>
+    <input type="text" placeholder="First Angel" id="f"><br>
+    <label for=""><h2>Enter Second Side</h2></label>
+    <input type="text" placeholder="Second Angel" id="s"><br>
+    <label for=""><h2>Enter Third Side</h2></label>
+    <input type="text" placeholder="Third Angel" id="t"><br>
+    <h1 id="ans"></h1>
+
+    
+</body>
+</html>
+<script>
+
+    let a = document.getElementById("f").value
+    let b = document.getElementById("s").value
+    let c = document.getElementById("t").value
+    let d = +a + +b + +c
+    if(a == ""){
+        document.getElementById("ans").innerHTML = ""
+    }
+    else if(d == 180){
+        if(a == b && b == c){
+            document.getElementById("ans").innerHTML = "Equilateral"
+        }
+        else if(a==b || b==c || c==a){
+            document.getElementById("ans").innerHTML = "Isosceles"
+        }
+        else{
+            document.getElementById("ans").innerHTML = "Scalene"
+        }
+    }
+    else{
+        document.getElementById("ans").innerHTML = "Invalid Value"
+    }
+
+</script>

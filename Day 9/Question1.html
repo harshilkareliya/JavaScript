@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <label for=""><h2>Enter Your Unit</h2></label>
+        <input type="number" placeholder="Enter number" id="unit"><br>
+        <h1 id="ans"></h1>
+    </center>
+</body>
+</html>
+<script>
+    let a = document.getElementById("unit").value
+
+    if(a == ""){
+        document.getElementById("ans").innerHTML = ""
+    }
+    else{
+        if(a <= 0){
+            document.getElementById("ans").innerHTML = "Invalid number !"
+        }
+        else if(a <= 100 ){
+            document.getElementById("ans").innerHTML = ""
+        }
+        else if(a <= 200){
+            let c = a - 100
+            let d = 2*c + 100
+            document.getElementById("ans").innerHTML = "First Hundred charge($1 per unit) :- 100 <br>Second Hundred charge($2 per unit) :- "+2*c + "<br>Total Bill :- "+d
+
+        }
+        else {
+            let c = a - 200
+            let d = 3*c + 300
+            document.getElementById("ans").innerHTML = "First Hundred charge($1 per unit) :- 100 <br>Second Hundred charge($2 per unit) :- 200 <br> Above 200 hundred Charge :- "+3*c +"<br>Total Bill :- "+d
+        }
+    }
+</script>

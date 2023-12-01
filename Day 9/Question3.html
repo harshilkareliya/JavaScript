@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Enter First Number</label><br>
+    <input type="text" id="f" placeholder="Enter Any Number"> <br><br>
+    <label for="">Enter Second Number</label><br>
+    <input type="text" id="s" placeholder="Enter Any Number"> <br><br>
+    <label for="">Enter Third Number</label><br>
+    <input type="text" id="t" placeholder="Enter Any Number">
+
+    <h1 id="ans"></h1>
+</body>
+</html>
+<script>
+    let a = document.getElementById("f").value
+    let b = document.getElementById("s").value
+    let c = document.getElementById("t").value
+
+    if(a == ""){
+        document.getElementById("ans").innerHTML = ""
+    }
+    else{
+        if(a > b){
+            if(a > c){
+                document.getElementById("ans").innerHTML = "First Number is Largest"
+            }
+            else{
+                document.getElementById("ans").innerHTML = "Third Number is Largest"
+            }
+        }
+        else {
+            if(b > c){
+                document.getElementById("ans").innerHTML = "Second Number is Largest"
+            }
+            else{
+                document.getElementById("ans").innerHTML = "Third Number is Largest"
+            }
+        }
+    }
+
+</script>
