@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Enter Any Number</label><br>
+    <input type="number" id="a1" placeholder="Enter Any Number"> <br><br>
+    <label for="">Enter Any Number</label><br>
+    <input type="number" id="a2" placeholder="Enter Any Number"> <br><br>
+    <label for="">Enter Any Number</label><br>
+    <input type="number" id="a3" placeholder="Enter Any Number"> <br><br>
+    <label for="">Enter Any Number</label><br>
+    <input type="number" id="a4" placeholder="Enter Any Number">
+
+    <h1 id="ans"></h1>
+</body>
+</html>
+<script>
+    let a = document.getElementById("a1").value
+    let b = document.getElementById("a2").value
+    let c = document.getElementById("a3").value
+    let d = document.getElementById("a4").value
+
+    if(a == ""){
+        document.getElementById("ans").innerHTML = ""
+    }
+    else{
+        if(a<b){
+            if(a<c){
+                if(a<d){
+                    document.getElementById("ans").innerHTML = "First Number is Smallest"
+                }
+                else{
+                    document.getElementById("ans").innerHTML = "Forth Number is Smallest"
+                }
+            }
+            else{
+                if(c<d){
+                document.getElementById("ans").innerHTML = "Third Number is Smallest"
+                }
+                else{
+                    document.getElementById("ans").innerHTML = "Forth Number is Smallest"
+                }
+            }
+        }
+        else {
+            if(b<c){
+                if(b<d){
+                    document.getElementById("ans").innerHTML = "Second Number is Smallest"
+                }
+                else{
+                    document.getElementById("ans").innerHTML = "Forth Number is Smallest"
+                }
+            }
+            else{
+                if(c<d){
+                    document.getElementById("ans").innerHTML = "Third Number is Smallest"
+                }
+                else{
+                    document.getElementById("ans").innerHTML = "Forth Number is Smallest"
+                }
+            }    
+        }
+    }
+
+</script>
