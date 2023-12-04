@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Language :- </h1>
+    <h2>English</h2>
+    <h2>Spanish</h2>
+    <h2>French</h2>
+
+    <h1>Enter any one language </h1>
+    <input type="text" id="lang" placeholder="Language">
+
+    <h1 id="ans"></h1>
+</body>
+</html>
+<script>
+
+    let a = document.getElementById("lang").value 
+    let lang
+    switch (a) {
+        case "": lang = ""
+        break;
+        case "English": lang = "Hello !" 
+        break;
+        case "Spanish": lang = "¡Hola" 
+        break;
+        case "French": lang = "Bonjour" 
+        break;
+        default: lang = "Language not supported."
+            break;
+    }
+    if (a != ""){
+        document.getElementById("ans").innerHTML = `${a} :- ${lang}`
+    }
+    
+
+</script>

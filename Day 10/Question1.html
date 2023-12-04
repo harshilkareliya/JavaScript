@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Monday</h1>
+    <h1>Tuseday</h1>
+    <h1>Wednesday</h1>
+    <h1>Thursday</h1>
+    <h1>Firday</h1>
+    <h1>Saturday</h1>
+    <h1>Sunday</h1>
+
+    <input type="text" placeholder="Enter Day Name" id="day">
+
+    <h2 id="ans"></h2>
+    
+</body>
+</html>
+
+<script>
+
+    let a = document.getElementById("day").value 
+    let day 
+
+    switch (a) {
+        case "Monday":day = "It's the start of the workweek."
+            break;
+        case "Tuseday":day = "It's workweek."
+            break;
+        case "Wednesday":day = "It's workweek."
+            break;
+        case "Thursday":day = "It's workweek."
+            break;
+        case "Firday":day = "It's almost the weekend!"
+            break;
+        case "Saturday":day = "It's weekend"
+            break;
+        case "Sunday":day = "It's weekend"
+            break;
+        default: day = "Enter valid day name!.."
+            break;
+    }
+    console.log(`${day}`)
+
+</script>

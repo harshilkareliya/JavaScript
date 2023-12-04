@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>Enter A - Excellent! You got an A.</h2>
+    <h2>Enter B - Well done! You got a B.</h2>
+    <h2>Enter C - Good job! You got a C.</h2>
+    <h2>Enter D - You got a D. Keep working hard!</h2>
+    <h2>Enter E - Unfortunately, you failed.</h2>
+
+    <input type="text" placeholder="Enter Day Name" id="grade">
+
+    <h2 id="ans"></h2>
+    
+</body>
+</html>
+
+<script>
+
+    let a = document.getElementById("grade").value 
+
+    switch (a) {
+        case "A":document.getElementById("ans").innerHTML = "Excellent! You got an A."
+            break;
+        case "B":document.getElementById("ans").innerHTML = "Well done! You got a B"
+            break;
+        case "C":document.getElementById("ans").innerHTML = "Good job! You got a C."
+            break;
+        case "D":document.getElementById("ans").innerHTML = "You got a D. Keep working hard!." 
+            break;
+        case "E":document.getElementById("ans").innerHTML = "Unfortunately, you failed." 
+            break;
+        default: document.getElementById("ans").innerHTML = ""
+            break;
+    }
+    console.log(`${grade}`)
+
+</script>

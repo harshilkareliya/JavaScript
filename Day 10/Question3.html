@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Enter Color Name</h1>
+    <h2>Red - Stop!</h2>
+    <h2>Yellow - Slow down!</h2>
+    <h2>Green - Go!</h2>
+
+    <input type="text" placeholder="Enter Day Name" id="color">
+
+    <h2 id="ans"></h2>
+    
+</body>
+</html>
+
+<script>
+
+    let a = document.getElementById("color").value 
+    let color 
+
+    switch (a) {
+        case "Red":color = "Stop!"
+            break;
+        case "Yellow":color = "Slow down!"
+            break;
+        case "Green":color = "Go!"
+            break;
+        default: color = "Invalid light color"
+            break;
+    }
+    console.log(`${color}`)
+
+</script>
