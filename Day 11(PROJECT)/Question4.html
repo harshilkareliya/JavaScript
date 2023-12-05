@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Enter KuwaitiDinar</h1>
+    <input type="text" id="kd" placeholder="Enter any character">
+
+    <br><br>
+    <h2>Converson rate :- 1kd to 256rupees</h2>
+    <h1>Converted into Indian Ruppes :- <span id="ans"></span></h1>
+
+</body>
+</html>
+
+<script>
+
+    let kd = document.getElementById("kd").value
+  
+
+    if(kd == ""){
+        
+    }
+    else{
+        document.getElementById("ans").innerHTML = kd * 256
+
+    }
+</script>
+

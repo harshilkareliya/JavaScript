@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Enter any number</h1>
+    <input type="text" id="num" placeholder="Enter any character">
+
+    <br>
+    <h1 id="ans"></h1>
+
+</body>
+</html>
+
+<script>
+
+    let a = document.getElementById("num").value
+    let output
+
+    if (a == ""){
+        output = ''
+    }
+    else{
+        switch(parseInt(a)){
+        case 1 : output = 'Sunday'
+        break;
+        case 2 : output = 'Monday'
+        break;
+        case 3 : output = 'Tuesday'
+        break;
+        case 4 : output = 'Wednesday'
+        break;
+        case 5 : output = 'Thursday'
+        break;
+        case 6 : output = 'Friday'
+        break;
+        case 7 : output = 'Saturday'
+        break;
+        default : output = 'Invalid number!!!'
+        break;
+    }
+    
+    }
+    document.getElementById("ans").innerHTML = output
+</script>
+
