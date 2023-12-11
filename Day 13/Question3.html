@@ -11,52 +11,42 @@
 </html>
 <script>
 
-    // let a,b
-    // let c = 1
-    // for(a = 1;a<=4;a++){
-    //     for(b=1;b<=4;b++){
-    //         document.write(c)
-    //         c++
-    //     }
-    //     for()
-    //     document.write("<br>")
-    // }
-    
+let i,j,a=1
+let b = []
 
-    
-
-    let num = 4
-    let output = Array[4][4]
-    // let output = ""
-    let n = 1
-    let low = 0
-    let high = num-1
-    let i 
-
-    for(i=0;i<=1;i++){
-        for(let j=low;j<=high+1;j++){
-            Array[i][j] = n
-            n++
-        }
-        for(let j=low+1;j<=high+1;j++){
-            Array[i][high] = n
-            n++
-        }
-        for(let j=high-1;j<=low+1;j--){
-            Array[high][j] = n
-            n++
-        }
-        for(let j=high-2;j<=low+2;j--){
-            Array[low][j] = n
-            n++
-        }
+for(i=0;i<4;i++){
+    b[i] = []
+    for(j=0;j<4;j++){
+        // if(i==0){
+            b[i][j] = a
+            a++
+            
+        // }
+        // if(i==2 &&)
     }
-    for(let i=1;i<=4;i++){
-        for(let j=1;j<=4;i++){
-            document.write(Array[i][j])
-        }
-    }
+}
+// for(i=0;i<4;i++){
+//     for(j=0;j<4;j++){
+//         console.log(b[i][j])
+        document.write(b,"<br>")
+//     }
+// }
     
+
+let gfg = [];
+let row = 3;
+let col = 3;
+let h = 0
+
+// Loop to initialize 2D array elements.
+for (let i = 0; i < row; i++) {
+	gfg[i] = [];
+	for (let j = 0; j < col; j++) {
+		gfg[i][j] = h++;
+	}
+}
+document.write(gfg,"<br>");
+
 
 
 </script>
