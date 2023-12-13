@@ -6,6 +6,40 @@
     <title>Document</title>
 </head>
 <body>
+
+    <h1>Enter number in three digit</h1>
+    <input type="text" id="num"><br>
+    
+
+    <h1>Sum of all digit :- <span id="ans"></span></h1>
     
 </body>
 </html>
+<script>
+
+    // let a = document.getElementById("num").value
+    let a = 789
+    let sum 
+    sum=0
+    let extra = 0
+ 
+    function digit(){
+        
+        while(a!=0){
+            sum = +sum + +a % 10  
+            parseInt(a)
+            parseInt(sum)
+            
+        
+           a= +a/10
+           parseInt(a)
+            // document.write(a)
+            console.log(sum)
+        }
+        console.log(sum)
+        // document.getElementById("ans").innerHTML = parseInt(sum)
+        // console.log(parseInt(sum))
+
+    }
+    digit()
+</script>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Enter Your Weight in kg</h1>
+    <input type="text" id="num1" placeholder="Enter number"><br><br>
+    <h1>Enter Your Height in meter</h1>
+    <input type="text" id="num2" placeholder="Enter number"><br>
+
+    <h2 id="ans"></h2>
+
+    <script>
+
+        let a = document.getElementById("num1").value
+        let b = document.getElementById("num2").value
+
+        
+        function bmi(w,h){
+
+            if(a==0 && b==0){
+                return " " 
+            }
+            return w / (h ** 2)
+
+        }
+        let ans = bmi(a,b)
+        document.getElementById("ans").innerHTML = "BMI :- " +ans
+    </script>
+</body>
+</html>

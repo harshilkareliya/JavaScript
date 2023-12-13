@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Enter number</h1>
+    <input type="text" id="num1" placeholder="Enter number"><br><br>
+
+
+    <h2 id="ans"></h2>
+
+    <script>
+
+        let a = document.getElementById("num1").value
+
+        function type(c){
+            if(c==""){
+                return " "
+            }
+            else if(c%2 == 0){
+                return "EVEN Number"
+            }
+            else{
+                return "ODD Number"
+            }
+
+        }
+
+        document.getElementById("ans").innerHTML = type(a)
+    </script>
+</body>
+</html>

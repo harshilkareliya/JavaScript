@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Enter length</h1>
+    <input type="text" id="length" placeholder="Enter length"><br><br>
+    <h1>Enter width</h1>
+    <input type="text" id="width" placeholder="Enter width"><br>
+
+    <h2 id="ans"></h2>
+
+    <script>
+
+        let a = document.getElementById("length").value
+        let b = document.getElementById("width").value
+
+        function area(a,b){
+            return +a * +b
+        }
+
+        document.getElementById("ans").innerHTML = "Area of rectangle :- "+area(a,b)
+    </script>
+</body>
+</html>
