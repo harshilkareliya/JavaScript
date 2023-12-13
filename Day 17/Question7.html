@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Enter row</h1>
+        <input type="text" id="row" placeholder="Enter number"><br><br>
+
+    
+    
+        <script>
+    
+            let a = document.getElementById("row").value
+    
+            function pattern(x){
+                if(x==0){
+                    return " "
+                } 
+                else{
+                    let n = 1
+                    for(let i=x;i>=1;i--){
+                        for(let j=1;j<=i;j++){
+                            document.write(n," ")
+                            n++
+                        }
+                        document.write("<br>")
+                    }
+                }
+            }
+            
+            pattern(a)
+            
+        </script>
+    </body>
+    </html>
+
+</body>
+</html>
