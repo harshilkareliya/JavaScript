@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Enter number</h1>
+    <input type="text" id="number" placeholder="number"><br><br>
+    
+</body>
+</html>
+<script>
+    let a = document.getElementById("number").value
+
+    let square1 = (num) => {
+        return num * num
+    }
+
+    function square2(num) {
+        return num * num;
+    }
+
+    document.write(square1(a))
+    console.log(square2(a))
+</script>

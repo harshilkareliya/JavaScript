@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Enter first number</h1>
+    <input type="text" id="firstnumber" placeholder="firstnumber"><br><br>
+    <h1>Which type of calculation</h1>
+    <input type="text" id="calculation" placeholder="calculate"><br><br>
+    <h1>Enter second number</h1>
+    <input type="text" id="secondnumber" placeholder="secondnumber"><br><br>
+
+    <h1>Answer :- <span id="ans"></span></h1>
+</body>
+</html>
+<script>
+
+    let a = document.getElementById("firstnumber").value
+    let b = document.getElementById("calculation").value
+    let c = document.getElementById("secondnumber").value
+
+    function add(x,y){
+        return +x + +y
+    }
+
+    let substract = function(x,y){
+        return +x - +y
+    }
+
+    function multiply(x,y){
+        return +x * +y
+    }
+
+    let divide = (x,y) =>{
+        return +x / +y
+    }
+
+    let output
+    switch(b){
+        case '+' : output = add(a,c)
+        break;
+        case '-' : output = substract(a,c)
+        break;
+        case '*' : output = multiply(a,c)
+        break;
+        case '/' : output = divide(a,c)
+        break;
+        default : output = "Unvalid sign"
+        break;
+
+    }
+
+    document.getElementById("ans").innerHTML = output
+</script>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Enter Your Name</h1>
+    <input type="text" id="name" placeholder="number"><br><br>
+    
+</body>
+</html>
+<script>
+    let a = document.getElementById("name").value
+
+    function greetUser(name){
+        if(name==''){
+            return " "
+        }
+
+            return "hello "+name
+    }
+
+    let output = greetUser(a)
+    document.write(output)
+</script>
