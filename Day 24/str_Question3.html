@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Enter Your First Name</h1>
+    <input type="text" id="fname" placeholder="Name Surname"><br><br>
+</body>
+</html>
+<script>
+
+    let fullname = document.getElementById("fname").value
+    let extract = fullname.trim(fullname.split(" "))
+    let n = 0
+    for(let i=0;i<=extract.length;i++){
+        if(extract.charAt(i) == " "){
+            break
+        }
+        n++
+    }
+    let firstname = extract.substring(0,n)
+    document.write("Welcome, "+firstname+"!")
+
+</script>

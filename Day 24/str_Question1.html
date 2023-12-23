@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Enter any word</h1>
+    <input type="text" id="word" placeholder="Word"><br><br>
+    
+</body>
+</html>
+<script>
+
+    let word = document.getElementById("word").value
+    let n = 0
+
+    for(let i=0;i<word.length;i++){
+        switch (word.charAt(i)) {
+            case 'a': n++
+            break;
+            case 'e': n++
+            break;
+            case 'i': n++
+            break;
+            case 'o': n++
+            break;
+            case 'u': n++
+            break;
+            default:
+            break;
+        }
+    }
+    document.write("Number of Vowel :- ",n)
+</script>
