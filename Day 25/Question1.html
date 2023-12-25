@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h3>Name : <span id="name"></span></h3>
+    <h3>Age : <span id="age"></span></h3>
+    <h3>Grade : <span id="grade"></span></h3>
+    
+</body>
+</html>
+
+<script>
+
+    let student = {
+        name: "Hepin Savaliya",
+        age: 18,
+        grade: 'A'
+    };
+
+    document.getElementById("name").innerHTML = student.name
+    document.getElementById("age").innerHTML = student.age
+    document.getElementById("grade").innerHTML = student.grade
+
+</script>

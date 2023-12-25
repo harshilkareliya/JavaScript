@@ -7,14 +7,15 @@
 </head>
 <body>
 
-    <h1>Enter any string in lowercase</h1>
-    <input type="text" id="str" placeholder="abc"><br><br>
+    <h1>Enter any string in uppercase</h1>
+    <input type="text" id="str" placeholder="ABC"><br><br>
     
 </body>
 </html>
 <script>
 
-       let str = document.getElementById("str").value
-        document.write(str.toUpperCase())
+       let upr = document.getElementById("str").value
+       
+        document.write(upr.toLocaleLowerCase())
 
 </script>

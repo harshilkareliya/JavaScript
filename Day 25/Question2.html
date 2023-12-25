@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <label for="">Name :</label>
+    <input type="text" placeholder="Name" id="name"><br><br>
+
+    <label for="">Age :</label>
+    <input type="text" placeholder="Age" id="age"><br><br>
+
+    <!-- <h3>Name : <span id="name"></span></h3>
+    <h3>Age : <span id="age"></span></h3> -->
+    
+</body>
+</html>
+
+<script>
+
+    let ob = {
+        name,
+        age
+    }
+
+    let a = document.getElementById("name").value
+    let b = document.getElementById("age").value 
+
+    ob.name = a
+    ob.age = b
+
+    document.write("Name : ",ob.name,"<br>")
+    document.write("Age :  ",ob.age)
+
+</script>
