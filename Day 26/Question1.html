@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Person 1 Detail</h1>
+    <input type="text" id="firstname1" placeholder="Enter your firstname"><br>
+    <input type="text" id="lastname1" placeholder="Enter your lastname"><br>
+    <input type="text" id="age1" placeholder="Enter your age"><br><br>
+    <h1>Person 2 Detail</h1>
+    <input type="text" id="firstname2" placeholder="Enter your firstname"><br>
+    <input type="text" id="lastname2" placeholder="Enter your lastname"><br>
+    <input type="text" id="age2" placeholder="Enter your age"><br><br>
+    <h1>Person 3 Detail</h1>
+    <input type="text" id="firstname3" placeholder="Enter your firstname"><br>
+    <input type="text" id="lastname3" placeholder="Enter your lastname"><br>
+    <input type="text" id="age3" placeholder="Enter your age"><br><br>
+    <h1>Person 4 Detail</h1>
+    <input type="text" id="firstname4" placeholder="Enter your firstname"><br>
+    <input type="text" id="lastname4" placeholder="Enter your lastname"><br>
+    <input type="text" id="age4" placeholder="Enter your age"><br><br>
+    
+</body>
+</html>
+<script>
+
+    firstname1 = document.getElementById("firstname1").value
+    firstname2 = document.getElementById("firstname2").value
+    firstname3 = document.getElementById("firstname3").value
+    firstname4 = document.getElementById("firstname4").value
+    lastname1 = document.getElementById("lastname1").value
+    lastname2 = document.getElementById("lastname2").value
+    lastname3 = document.getElementById("lastname3").value
+    lastname4 = document.getElementById("lastname4").value
+    age1 = document.getElementById("age1").value
+    age2 = document.getElementById("age2").value
+    age3 = document.getElementById("age3").value
+    age4 = document.getElementById("age4").value
+
+    // for(let i=1;i<=4;i++){
+    //     firstname`${i}` = document.getElementById(`firstname${i}`).value
+    //     lastname`${i}` = document.getElementById(`lastname${i}`).value
+    //     age`${i}` = document.getElementById(`age${i}`).value
+    // }
+
+
+    let insan = [
+        {firstname : firstname1,lastname : lastname1,age : age1},
+        {firstname : firstname2,lastname : lastname2,age : age2},
+        {firstname : firstname3,lastname : lastname3,age : age3},
+        {firstname : firstname4,lastname : lastname4,age : age4},
+    ]
+
+    for(let i=0;i<insan.length;i++){
+        console.log("Person"+(i+1))
+        console.log(insan[i].firstname)
+        console.log(insan[i].lastname)
+        console.log(insan[i].age)
+        console.log()
+    }
+</script>

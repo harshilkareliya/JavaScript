@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let num=30
+    let mapchar = [
+        {a : 'a',b : num++},
+        {a : 'b',b : num++},
+        {a : 'c',b : num++},
+        {a : 'd',b : num++},
+        {a : 'e',b : num++},
+        {a : 'f',b : num++},
+        {a : 'g',b : num++},
+    ]
+
+    for(let i=0;i<=mapchar.length;i++){
+        document.write(mapchar[i].a+" - "+mapchar[i].b+"<br>")
+    }
+
+</script>
