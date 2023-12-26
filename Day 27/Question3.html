@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+</body>
+</html>
+<script>
+
+    let book = [
+        {title : "The Hunger Games",author : "Suzanne Collins",price : 100,quantityAvailable : 11},
+        {title : "Harry Potter",author : "J.K. Rowling",price : 101,quantityAvailable : 1},
+        {title : "Pride and Prejudice",author : "Jasne",price : 40,quantityAvailable : 4},
+        {title : "To Kill a Mockingbird",author : "Harper Lee",price : 55,quantityAvailable : 0}
+    ]
+
+    let budjet = []
+    for(let i=0;i<book.length;i++){
+        if(book[i].price <= 60 && book[i].quantityAvailable > 0){
+            budjet.push(book[i].title)
+        }
+    }
+    console.log(budjet)
+</script>

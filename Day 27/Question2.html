@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+let qt = [
+        {text : "Never let the fear of striking out keep you from playing the game.",
+        author : " Babe Ruth",
+        category : "Motivation"},
+
+        {text : "Education is one thing no one can take away from you.",
+        author : "Elin Nordegren",
+        category : "Education"},
+
+        {text : "Curiosity about life in all of its aspects, I think, is still the secret of great creative people.",
+        author : "Leo Burnett",
+        category : "skill"},
+
+        {text : "Education’s purpose is to replace an empty mind with an open one.",
+        author : "Malcolm Forbes",
+        category : "Education"}
+
+    ]
+
+    let Education = []
+
+    for(let i = 0;i<qt.length;i++){
+        if(qt[i].category === "Education"){
+            Education.push(qt[i].text)
+        }
+    }
+    console.log(Education)
+
+</script>
