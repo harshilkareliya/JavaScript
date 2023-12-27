@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+// function book(name,before) {
+//     if(before < 2000){
+//         return name
+//     }
+//     else{
+//         return " "
+//     }
+// }
+
+// let library = [
+//         {title : "The Hunger Games",author : "Suzanne Collins",year : 1997},
+//         {title : "Harry Potter",author : "J.K. Rowling",year : 2012},
+//         {title : "Pride and Prejudice",author : "Jasne",year : 1912},
+//         {title : "To Kill a Mockingbird",author : "Harper Lee",year : 2001}
+//     ]
+
+//     for(let i=0;i<=library.length;i++){
+//         console.log(book(library[i].title,library[i].year))
+//     }
+    
+
+// type 2 type 2 type 2 type 2 type 2 type 2 type 2 type 2 type 2 type 2 type 2 type 2
+function book(lib) {
+    let output = []
+    for(let i=0;i<lib.length;i++){
+        if(lib[i].year < 2000){
+            output.push(lib[i].title) 
+        }
+    }
+    return output
+}
+
+let library = [
+        {title : "The Hunger Games",author : "Suzanne Collins",year : 1997},
+        {title : "Harry Potter",author : "J.K. Rowling",year : 2012},
+        {title : "Pride and Prejudice",author : "Jasne",year : 1912},
+        {title : "To Kill a Mockingbird",author : "Harper Lee",year : 2001}
+    ]
+    
+    console.log(book(library))
+
+      
+</script>
