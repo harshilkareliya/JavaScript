@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="f" placeholder="Enter First number"><br>
+    <input type="text" id="s" placeholder="Enter Second number"><br><br>
+    <button onclick="enternumber()">Division</button><br>
+
+</body>
+</html>
+<script>
+
+    let a = document.querySelector('#f').value
+    let b = document.querySelector('#s').value
+
+    function divisioncheck(n,m){
+        if(m <= 0){
+            throw new Error("Number not divisible by "+m)
+        }
+        else{
+            document.write("Division :- " + m/n)
+        }
+    }
+
+    function enternumber(){
+        try{
+            divisioncheck(a,b)
+        }
+        catch(err){
+            document.write(err.message)
+        }
+    }
+
+
+</script>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="email" placeholder="Enter Email"><br><br>
+    <button onclick="check()">Click</button>
+</body>
+</html>
+<script>
+
+    let email = document.querySelector('#email').value
+
+    function emailcheck(email){
+        if(!email.includes('@')){
+            // console.log("Successfully entered email")
+            throw new Error("You are missing @")
+        }
+        else{
+            document.write("Successfully entered email")
+        }
+    }
+
+    function check(){
+        try{
+            emailcheck(email)
+        }
+        catch(err){
+            document.write("Missing ",err.message)
+        }
+    }
+
+</script>

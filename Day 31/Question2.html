@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    function strcheck(word){
+        if(word === ""){
+            // console.log("Successfully entered email")
+            throw new Error("String must contain some characters")
+        }
+        else{
+            console.log("Your string is right")
+        }
+    }
+
+    try{
+        strcheck("")
+    }
+    catch(not){
+        console.log(not.message)
+    }
+
+</script>
