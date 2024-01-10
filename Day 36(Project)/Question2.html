@@ -6,7 +6,10 @@
     <title>Document</title>
 </head>
 <body>
-   
+    <button onclick="playguitar()">Click for Guitar</button><br><br>
+    <button onclick="playpiano()">Click for Piano</button><br><br>
+
+    <h1 id="ans"></h1>
 </body>
 </html>
 <script>
@@ -32,13 +35,13 @@ class Piano extends Instrument{
 const pian = new Piano
 const guit = new Guitar
 
-
+playguitar =() =>{
     guit.playSound()
+}
 
-
-
+function playpiano(){
     pian.playSound()
-
+}
 
 
 
