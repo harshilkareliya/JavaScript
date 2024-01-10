@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    class animal{
+        constructor(name,place,size){
+            this.name = name
+            this.place = place
+            this.size = size
+        }
+    }
+
+    class bachhu extends animal{
+        constructor(name,place,size,food){
+            super(name,place,size,food)
+            this.food = food
+        }
+    }
+
+    const prani = new bachhu("sparrow","gujrat","20 cm","rise")
+
+    console.log(prani)
+</script>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <center>
+    <form action="" id="myform" style="border: 10px double black;width: 30%;background-color: black;color: white;">
+        <h1>Sign Up</h1>
+        <label for="">Enter your name</label><br>
+        <input type="text" id="name"><br><br>
+        <label for="">Enter Your Number</label><br>
+        <input type="text" id="number"><br><br>
+        <label for="">Enter Your Email </label><br>
+        <input type="text" id="email"><br><br>
+        <label for="">Set Your Password</label><br>
+        <input type="password" id="pass"><br><br>
+        <label for="">Re-enter Your Password</label><br>
+        <input type="password" id="repass"><br><br>
+        <span id="error" style="color: red;font-size: 20px;font-weight: 800;"></span><br><br>
+        <button type="submit" id="sub" style="padding: 5px 10px;cursor: pointer;">Submit</button><br><br>
+    </form>
+    </center>
+
+</body>
+</html>
+<script>
+
+    document.getElementById("myform").onsubmit = function(event){
+        try{
+            var name = document.getElementById("name").value
+            var number = document.getElementById("number").value
+            var email = document.getElementById("email").value
+            var pass = document.getElementById("pass").value
+            var repass = document.getElementById("repass").value
+
+            if(!/\0/.test(name)){
+                throw new Error("Name is missing ! You must enter name")
+            }
+            if(/\d/.test(name)){
+                throw new Error("Please Check your name !")
+            }
+            // if(!/\0/.test(number)){
+            //     throw new Error("Number is missing ! You must enter mobile number")
+            // }
+            if(!/^\d{10}$/.test(number)){
+                throw new Error("Invalid Mobile Number")
+            }
+            // if(!/\0/.test(email)){
+            //     throw new Error("email is missing ! You must enter email    ")
+            // }
+            // if(!/^[w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email)){
+            if(!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email)){
+                throw new Error("Invalid Email")
+            }   
+            if(!/^\w{8}$/.test(pass)){
+                throw new Error("Invalid PassWord")
+            }
+            if(pass != repass){
+                throw new Error("Doesn't Match Password")
+            }
+            else{
+                alert("Congratulation! Successfully Submit your form")
+            }
+
+        }
+        catch(error){
+            event.preventDefault()
+            document.getElementById("error").innerHTML = error.message
+        }
+    }
+
+
+</script>

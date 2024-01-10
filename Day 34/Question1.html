@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    class Car{
+        constructor(brand, carname, price, rating){
+            this.brand = brand
+            this.carname = carname
+            this.price = price
+            this.rating = rating
+        }
+    }
+
+    class dreamcar extends Car{
+        constructor(brand,carname,price,rating){
+            super(brand,carname,price,rating)
+        }
+    }
+
+    const car1 = new dreamcar("ODDI","C3",100000,"⭐⭐⭐⭐⭐")
+    console.log(car1)
+
+    
+
+</script>

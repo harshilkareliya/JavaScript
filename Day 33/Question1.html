@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <center>
+    <form action="" id="mineform" style="border: 10px double black;width: 30%;">
+        <h1>Sign Up</h1>
+        <label for="">Enter your name</label><br>
+        <input type="text" id="name"><br><br>
+        <label for="">Enter Your Number</label><br>
+        <input type="text" id="number"><br><br>
+        <label for="">Enter Your Email </label><br>
+        <input type="text" id="email"><br><br>
+        <label for="">Set Your Password</label><br>
+        <input type="password" id="pass"><br><br>
+        <label for="">Re-enter Your Password</label><br>
+        <input type="password" id="repass"><br><br>
+        <span id="error" style="color: red;font-size: 20px;font-weight: 800;"></span><br><br>
+        <button type="submit" id="sub" style="padding: 5px 10px;cursor: pointer;">Submit</button><br><br>
+    </form>
+    </center>
+
+</body>
+</html>
+
+<script>
+
+$(document).ready(function(){
+    isTrue = true;
+
+    $("#mineform").submit(function(e){
+        var name = $("#name").val()
+        if(name === ""){
+            isTrue = false
+            alert("Enter Your name")
+        }
+
+        var number = $("#number").val()
+        if(number === ""){
+            isTrue = false
+            alert("Enter Your number")
+        }
+        var emial = $("#email").val()
+        if(emial === ""){
+            isTrue = false
+            alert("Enter Your email")
+        }
+        var pass = $("#pass").val()
+        if(pass === ""){
+            isTrue = false
+            alert("Enter Your password")
+        }
+        var repass = $("#repass").val()
+        if(repass === ""){
+            isTrue = false
+            alert("Enter Your Re-enter password")
+        }
+        if(pass != repass){
+            isTrue = false
+            alert("Doesn't compare both password")
+        }
+
+        else{
+            alert("Successfully complete")
+        }
+    })
+})
+
+
+</script>

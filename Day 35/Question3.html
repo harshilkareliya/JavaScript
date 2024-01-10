@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    class food{
+        process(){
+            document.write("Enter Process")
+        }
+    }
+
+    class PIzza extends food{
+        process(){
+            document.write("PIzza :-Bake in Oven <br>") 
+        }
+    }
+
+    class Sushi extends food{
+        process(){
+            document.write("Shushi :- Serve<br>")
+        }
+    }
+    class Burger extends food{
+        process(){
+            document.write("Burger :- Bake in oven <br>")
+        }
+    }
+
+
+    const findPIzzaMethod = new PIzza
+    const findSushiMethod = new Sushi
+    const findBurgerMethod = new Burger
+    findPIzzaMethod.process()
+    findSushiMethod.process()
+    findBurgerMethod.process()
+
+</script>

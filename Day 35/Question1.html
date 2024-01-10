@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    var pie = 3.14
+    class shape{
+        claculateArea(){
+            return "Enter value"
+        }
+    }
+
+    class circle extends shape{
+        claculateArea(r){
+            return pie*(r*r)
+        }
+    }
+
+    class Rectangle extends shape{
+        claculateArea(l,w){
+            return l*w
+        }
+    }
+    class Square extends shape{
+        claculateArea(l){
+            return l**2
+        }
+    }
+
+
+    const findCircleArea = new circle
+    const findRectangleArea = new Rectangle
+    const findSquareArea = new Square
+    console.log(findCircleArea.claculateArea(3))
+    console.log(findRectangleArea.claculateArea(5,4))
+    console.log(findSquareArea.claculateArea(5))
+
+</script>

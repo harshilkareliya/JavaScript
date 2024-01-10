@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button >Draw for circle</button>
+    <button>Draw for square</button> -->
+</body>
+</html>
+<script>
+
+class shape{
+    draw(){
+        document.write("Drawing a shape")
+    }
+}
+
+class Circle extends shape{
+    draw(){
+        document.write("Drawing a Circle <br>")
+    }
+}
+class Square extends shape{
+    draw(){
+        document.write("Drawing a Square <br><br>")
+    }
+}
+
+
+const sq = new Square
+const cir = new Circle
+
+sq.draw()
+cir.draw()
+
+
+
+</script>

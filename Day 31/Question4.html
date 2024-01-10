@@ -14,24 +14,24 @@
 </body>
 </html>
 <script>
-
-    let a = document.querySelector('#f').value
-    let b = document.querySelector('#s').value
-
     function divisioncheck(n,m){
         if(m <= 0){
             throw new Error("Number not divisible by "+m)
         }
+        
         else{
-            document.write("Division :- " + m/n)
+            document.write("Division :- " + (n/m))
         }
     }
 
     function enternumber(){
         try{
+            let a = document.querySelector('#f').value
+            let b = document.querySelector('#s').value
             divisioncheck(a,b)
         }
         catch(err){
+         console.log(err.message)
             document.write(err.message)
         }
     }
