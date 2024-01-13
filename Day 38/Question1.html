@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            width: 80%;
+            height: 500px;
+            background-color: orange;
+        }
+        .offer{
+            /* margin-top: 50px; */
+            padding-top: 50px;
+            font-size: 45px;
+        }
+        .maincount{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .maincount div{
+            width: 23%;
+            height: 200px;
+            background-color: #fff;
+            border-radius: 10px;
+        }
+        .number{
+            font-size: 70px;
+            font-weight: bolder;
+            font-family: sans-serif;
+        }
+        .text{
+            margin-top: -40px;
+        }
+        
+    </style>
+</head>
+<body>
+    <center>
+        <div class="main">
+            <h1 class="offer">Get 40% Off On Holiday Sales!</h1>
+            <div class="maincount">
+                <div>
+                    <h1 id="day" class="number">02</h1>
+                    <h1 class="text">DAYS</h1>
+                </div>
+                <div>
+                    <h1 id="hour" class="number">23</h1>
+                    <h1 class="text">HOURS</h1>
+                </div>
+                <div>
+                    <h1 id="minute" class="number">59</h1>
+                    <h1 class="text">MINUTES</h1>
+                </div>
+                <div>
+                    <h1 id="second" class="number">59</h1>
+                    <h1 class="text">SECONDS</h1>
+                </div>
+                
+            </div>
+        </div>  
+    </center>
+</body>
+</html>
+<script>
+
+var day = document.getElementById("day")
+var hour = document.getElementById("hour")
+var minute = document.getElementById("minute")
+var second = document.getElementById("second")
+
+var seccount = 59
+var mincount = 59
+var hourcount = 23
+var daycount = 2
+var stop
+stop = setInterval(()=>{
+    seccount--
+    second.innerHTML = seccount
+    if(seccount == 0){
+        mincount--
+        minute.innerHTML = mincount
+            if(mincount == 0){
+                hourcount--
+                hour.innerHTML = hourcount
+                    if(hourcount == 0){
+                        daycount--
+                        day.innerHTML = daycount
+                        if(day <= 0){
+                            day.innerHTML = 0
+                        }
+                        if(day == 0 && hour == 0 && minute == 0 && second == 0){
+                            clearInterval(stop)
+                        }
+                        hourcount = 23  
+                    }
+                mincount = 60
+            }
+        seccount = 60
+    }
+},-500000)
+
+</script>

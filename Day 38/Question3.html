@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            display: flex;
+            justify-content: space-evenly;
+            text-align: center;
+        }
+        .sub{
+            background-color: gainsboro;
+            width: 15%;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="sub">
+            <h1>Real Estate</h1>
+            <h1 id="real">0</h1>
+        </div>
+        <div class="sub">
+            <h1>Books</h1>
+            <h1 id="book">0</h1>
+        </div>
+        <div class="sub">
+            <h1>Furniture</h1>
+            <h1 id="furn">0</h1>
+        </div>
+        <div class="sub">
+            <h1>Electronic</h1>
+            <h1 id="elec">0</h1>
+        </div>
+        <div class="sub">
+            <h1>Cars</h1>
+            <h1 id="car">0</h1>
+        </div>
+        <div class="sub">
+            <h1>Other</h1>
+            <h1 id="other">0</h1>
+        </div>
+    </div>
+
+</body>
+</html>
+<script>
+
+    var real = document.getElementById("real")
+    var book = document.getElementById("book")
+    var furn = document.getElementById("furn")
+    var elec = document.getElementById("elec")
+    var car = document.getElementById("car")
+    var other = document.getElementById("other")
+
+    var realcount = 0
+    var bookcount = 0
+    var furncount = 0
+    var eleccount = 0
+    var carcount = 0
+    var othercount = 0
+
+    var close;
+   close = setInterval(()=>{
+        realcount+=10
+        bookcount++
+        furncount+=4
+        eleccount+=50
+        carcount+=50
+        othercount++
+        real.innerHTML = realcount
+        book.innerHTML = bookcount
+        furn.innerHTML = furncount
+        elec.innerHTML = eleccount
+        car.innerHTML = carcount
+        other.innerHTML = othercount
+        if(realcount > 3921){
+            realcount = 3921
+        }
+        if(bookcount > 398){
+            bookcount = 398
+        }
+        if(furncount > 1229){
+            furncount = 1229
+        }
+        if(eleccount > 32891){
+            eleccount = 32891
+        }
+        if(carcount > 29221){
+            carcount = 29221
+        }
+        if(othercount > 298){
+            othercount = 298
+        }
+    },-50000)
+
+</script>
