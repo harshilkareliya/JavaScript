@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input{
+    width: 95%;
+    height: 50px;
+    border-radius: 10px;
+    margin-top: 30px;
+    /* margin-left: 10%; */
+    font-size: 20px;
+}
+button{
+    width: 8%;
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: -70px;
+    font-size: 20px;
+}
+#main{
+    display: flex;
+}
+#detail{
+    padding-left: 50px;
+}
+#detail h3{
+    font-size: 30px;
+}
+#detail p{
+    font-size: 20px;
+}
+#detail button{
+    width: 250px;
+    margin-top: 20px;
+    margin-left: 0px;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            width: 80%;
+            height: 500px;
+            background-color: #00FFD0;
+        }
+        .offer{
+            /* margin-top: 50px; */
+            padding-top: 50px;
+            font-size: 45px;
+        }
+        .maincount{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .maincount div{
+            width: 23%;
+            height: 200px;
+            background-color: black;
+            border-radius: 10px;
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .number{
+            font-size: 70px;
+            font-weight: bolder;
+            font-family: sans-serif;
+        }
+        .text{
+            margin-top: -40px;
+        }
+        
+    </style>
+</head>
+<body>
+    <center>
+        <br><br><br>
+        <label for="">Enter Date and Time</label><br>
+        <input type="datetime-local" id="date"><br><br>
+        <div class="main">
+            <h1 class="offer">OUR SALE END IN :</h1>
+            <div class="maincount">
+                <div>
+                    <h1 id="day" class="number"></h1>
+                    <h1 class="text">DAYS</h1>
+                </div>
+                <div>
+                    <h1 id="hour" class="number"></h1>
+                    <h1 class="text">HOURS</h1>
+                </div>
+                <div>
+                    <h1 id="minute" class="number"></h1>
+                    <h1 class="text">MINUTES</h1>
+                </div>
+                <div>
+                    <h1 id="second" class="number"></h1>
+                    <h1 class="text">SECONDS</h1>
+                </div>
+                
+            </div>
+        </div>  
+    </center>
+</body>
+</html>
+
+<script>
+let tday = document.getElementById("date").value
+let targetday = new Date(`${tday}`).getTime()
+
+let x = setInterval(function(){
+
+let today = new Date().getTime()
+let diffrence = targetday - today
+// console.log(diffrence)
+let day = Math.floor(diffrence/(1000*60*60*24))
+document.getElementById("day").innerHTML = day
+let hours = Math.floor((diffrence%(1000*60*60*24))/(1000*60*60))    
+document.getElementById("hour").innerHTML = hours
+let minute = Math.floor((diffrence%(1000*60*60))/(1000*60))
+document.getElementById("minute").innerHTML = minute
+let second = Math.floor((diffrence%(1000*60))/1000)
+document.getElementById("second").innerHTML = second
+
+},1000)
+</script>

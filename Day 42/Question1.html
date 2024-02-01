@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="change()">Change</button><br>
+    <img src="" alt="" id="photo">
+</body>
+</html>
+<script>
+    function change(){
+        document.getElementById("photo").innerHTML = ""
+    fetch('https://dog.ceo/api/breeds/image/random')
+    .then(function(returnapi){
+        return returnapi.json()
+    })
+    .then(function(json){
+        console.log(json)
+        display(json)
+    })
+
+    
+        function display(json){
+            
+            document.getElementById("photo").src=json.message
+        } 
+    }
+    
+   
+    
+
+
+</script>

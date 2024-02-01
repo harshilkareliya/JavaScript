@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Enter a city name</label><br>
+    <input type="text" id="city" placeholder="Enter a city name"><br><br>
+    <button onclick="find()">Find</button>
+    <div id="main">
+
+    </div>
+</body>
+</html>
+<script>
+
+function find(){
+document.getElementById("main").innerHTML = ""
+    let city = document.getElementById("city").value
+    // let city = "Rajkot"
+    let myapi = "1722e2a173e7d1b4f7e8db5ee4e17bc6"
+    function weather(){
+
+    // fetch(`https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=${myapi}`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${myapi}`)
+    .then(function(responce){
+        return responce.json()
+    })
+    .then(function(json){
+        console.log(json)
+        display(json)
+    })
+
+    function display(json){
+        let mintemp = document.createElement("h3")
+        mintemp.innerHTML = "Minimum Temprature : " + json.main.temp_min
+
+        let maxtemp = document.createElement("h3")
+        maxtemp.innerHTML = "Maximum Temprature : " + json.main.temp_max
+
+        let wind = document.createElement("h3")
+        wind.innerHTML = "Wind :"
+
+        let windetail = document.createElement("p")
+        windetail.innerHTML = "Degree : " + json.wind.deg + "<br> gust : " + json.wind.gust + "<br> speed : " + json.wind.speed
+    
+        let clouds = document.createElement("h3")
+        clouds.innerHTML = `Clouds : ${json.clouds.all}`
+    
+        let sunrise = document.createElement("h3")
+        sunrise.innerHTML = `Sunrise : ${json.sys.sunrise}`
+
+        let sunset = document.createElement("h3")
+        sunset.innerHTML = `Sunset : ${json.sys.sunset}`
+
+        document.getElementById("main").append(mintemp,maxtemp,wind,windetail,clouds,sunrise,sunset)
+    }
+}
+
+weather()
+}
+</script>

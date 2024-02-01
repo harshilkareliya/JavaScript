@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #product{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        #pic{
+            /* width: 150px; */
+            height: 200px;
+        }
+        #productdiv{
+            width: 23%;    
+        }
+    </style>
+</head>
+<body>
+    <div id="product"></div>
+</body>
+</html>
+<script>
+
+    let productdata = [
+        {
+            image : "https://m.media-amazon.com/images/I/71dEY4Neo3L._AC_UL480_FMwebp_QL65_.jpg",
+            title : "realme narzo N53 (Feather Gold, 4GB+64GB) 33W Segment Fastest Charging | Slim Smartphone | 90 Hz Smooth Display",
+            price : 7999,
+            rate : "⭐⭐⭐⭐⭐",
+        },
+        {
+            image : "https://m.media-amazon.com/images/I/61uUEqO5uQL._AC_UL480_FMwebp_QL65_.jpg",
+            title : "realme narPOCO C51 (Royal Blue, 6GB RAM, 128GB Storage)zo N53 (Feather Gold, 4GB+64GB) 33W Segment Fastest Charging | Slim Smartphone | 90 Hz Smooth Display",
+            price : 5999,
+            rate : "⭐⭐⭐⭐",
+        },
+        {
+            image : "httpws://m.media-amazon.com/images/I/813sVzTfvaL._AC_UL480_FMwebp_QL65_.jpg",
+            title : "realme narPOSamsung Galaxy M04 Light Green, 4GB RAM, 64GB Storage | Upto 8GB RAM with RAM Plus | MediaTek Helio P35 Octa-coreCO C51 (Royal Blue, 6GB RAM, 128GB Storage)zo N53 (Feather Gold, 4GB+64GB) 33W Segment Fastest Charging | Slim Smartphone | 90 Hz Smooth Display",
+            price : 5999,
+            rate : "⭐⭐⭐",
+        },
+        {
+            image : "https://m.media-amazon.com/images/I/61G6ef-AH-L._AC_UL480_FMwebp_QL65_.jpg",
+            title : "realme narPOSamsung Galaxy M04 Light Green, 4GB RAM, 64GB Storage | Upto 8GB RAM with RAM Plus | MediaTek Helio P35 Octa-coreCO C51 (Royal Blue, 6GB RAM, 128GB Storage)zo N53 (Feather Gold, 4GB+64GB) 33W Segment Fastest Charging | Slim Smartphone | 90 Hz Smooth Display",
+            price : 6499,
+            rate : "⭐⭐⭐⭐⭐",
+        }
+    ]
+
+    function product(productdata){
+        productdata.map((item)=>{
+                let div = document.createElement("div")
+                div.setAttribute("id","productdiv")
+                
+                let images = document.createElement("img")
+                images.setAttribute("src",item.image)
+                images.setAttribute("id","pic")
+                images.setAttribute("width","150px")
+
+                let name = document.createElement("h3")
+                name.innerHTML = item.title
+
+                let rupees = document.createElement("h2")
+                rupees.innerHTML = "₹ "+ item.price
+
+                let rating = document.createElement("h4")
+                rating.innerHTML = item.rate
+
+                let btn = document.createElement("button")
+                btn.innerHTML = "ADD TO CART"
+
+                div.append(images,name,rupees,rating,btn)
+                document.querySelector("#product").append(div)
+        })
+    }
+    product(productdata)
+
+</script>

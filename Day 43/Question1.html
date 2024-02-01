@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: #111318;color: white;">
+
+    <div style="width: 80%;margin-left: 10%;">
+    <input type="text" id="search_movie" placeholder="Enter Movie Name">
+    <button onclick="searchmovie()">Search</button><br><br><br>
+    <h3 style="color: white;">Top Result</h3>
+    <div id="main"></div>
+</div>
+</body>
+</html>
+<script>
+
+    const myapi = "54408fbb"
+    function searchmovie(){
+        let search_movie = document.getElementById("search_movie").value
+        fetch(`http://www.omdbapi.com/?apikey=${myapi}&t=${search_movie}`)
+        .then(function(response){
+            return response.json()
+        })
+        .then(function(json){
+            console.log(json)
+            showmovie(json)
+        })
+    }
+
+    function showmovie(json){
+        document.getElementById("main").innerHTML = ""
+        let image = document.createElement("img")
+        image.setAttribute("src",json.Poster)
+
+        let div = document.createElement("div")
+        div.setAttribute("id","detail")
+
+        let title = document.createElement("h3")
+        title.innerHTML = json.Title
+
+        let detail = document.createElement("p")
+        detail.innerHTML = "<br>"+ json.Year + "    •    " + json.Runtime + "    •    " + json.Language + "    •    " + json.Genre
+
+        let button = document.createElement("button")
+        button.innerHTML = "Click here to watch"
+
+        div.append(title,detail,button)
+        let main = document.querySelector("#main").append(image,div)
+        
+    }
+
+
+
+</script>

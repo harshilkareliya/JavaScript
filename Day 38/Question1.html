@@ -70,9 +70,9 @@ var hour = document.getElementById("hour")
 var minute = document.getElementById("minute")
 var second = document.getElementById("second")
 
-var seccount = 59
-var mincount = 59
-var hourcount = 23
+var seccount = 5
+var mincount = 5
+var hourcount = 2
 var daycount = 2
 var stop
 stop = setInterval(()=>{
@@ -86,18 +86,26 @@ stop = setInterval(()=>{
                 hour.innerHTML = hourcount
                     if(hourcount == 0){
                         daycount--
-                        day.innerHTML = daycount
-                        if(day <= 0){
+                        if(day>=0){
+                            day.innerHTML = daycount
+                        }
+                        if(day < 0){
                             day.innerHTML = 0
+                            if(hour <= 0){
+                                hour.innerHTML = 0
+                                if(minute <= 0){
+                                    minute.innerHTML = 0
+                                    if(second <= 0){
+                                        second.innerHTML = 0
+                                    }
+                                }
+                            }
                         }
-                        if(day == 0 && hour == 0 && minute == 0 && second == 0){
-                            clearInterval(stop)
-                        }
-                        hourcount = 23  
+                        hourcount = 2 
                     }
-                mincount = 60
+                mincount = 55
             }
-        seccount = 60
+        seccount = 5
     }
 },-500000)
 
