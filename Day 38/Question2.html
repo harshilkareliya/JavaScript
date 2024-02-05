@@ -72,11 +72,12 @@ var hour = document.getElementById("hour")
 var minute = document.getElementById("minute")
 var second = document.getElementById("second")
 
-var seccount = 59
-var mincount = 59
-var hourcount = 23
+var seccount = 5
+var mincount = 5
+var hourcount = 2
 var daycount = 3
 var stop
+// for(let i = 0;i<60;i++){
 stop = setInterval(()=>{
     seccount--
     second.innerHTML = seccount
@@ -95,12 +96,12 @@ stop = setInterval(()=>{
                         if(day == 0 && hour == 0 && minute == 0 && second == 0){
                             clearInterval(stop)
                         }
-                        hourcount = 23  
+                        hourcount = 2
                     }
-                mincount = 60
+                mincount = 5
             }
-        seccount = 60
+        seccount = 5
     }
 },1000)
-
+// }    
 </script>

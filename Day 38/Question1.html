@@ -75,6 +75,7 @@ var mincount = 5
 var hourcount = 2
 var daycount = 2
 var stop
+
 stop = setInterval(()=>{
     seccount--
     second.innerHTML = seccount
@@ -86,27 +87,39 @@ stop = setInterval(()=>{
                 hour.innerHTML = hourcount
                     if(hourcount == 0){
                         daycount--
-                        if(day>=0){
-                            day.innerHTML = daycount
+                        day.innerHTML = daycount
+                        if(daycount <= 1){
+                            // day.innerHTML = daycount
+                            daycount = 1
                         }
-                        if(day < 0){
-                            day.innerHTML = 0
-                            if(hour <= 0){
-                                hour.innerHTML = 0
-                                if(minute <= 0){
-                                    minute.innerHTML = 0
-                                    if(second <= 0){
-                                        second.innerHTML = 0
-                                    }
-                                }
-                            }
-                        }
-                        hourcount = 2 
+                        hourcount = 2
                     }
-                mincount = 55
+                    if(daycount == 0 && hourcount==0){
+                        hourcount = 0
+                    }
+                mincount = 5
+            }
+            if(daycount == 0 && hourcount==0 && mincount == 0){
+                        mincount = 0
             }
         seccount = 5
     }
-},-500000)
+    if(daycount == 0 && hourcount==0 && mincount == 0 && seccount == 0){
+                        seccount = 0
+    }
+},100)
 
+// if(day < 0){
+                        //     daycount = 0
+
+                        //     // if(hour <= 0){
+                        //     //     hour.innerHTML = 0
+                        //     //     if(minute <= 0){
+                        //     //         minute.innerHTML = 0
+                        //     //         if(second <= 0){
+                        //     //             second.innerHTML = 0
+                        //     //         }
+                        //     //     }
+                        //     // }
+                        // }
 </script>
