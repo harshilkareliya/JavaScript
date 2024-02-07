@@ -45,6 +45,9 @@ function product(){
         let price = document.createElement("h2")
         price.innerHTML = item.price
 
+        let qnty = document.createElement("p")
+        qnty.innerHTML = "Quantity : " + item.qnty
+
         let rate = document.createElement("h4")
         rate.innerHTML = item.rate
 
@@ -56,7 +59,7 @@ function product(){
             product()
         })
 
-        div.append(image,title,price,rate,removebtn)
+        div.append(image,title,price,rate,qnty,removebtn)
         document.querySelector("#filterdcart").append(div)
 
     })

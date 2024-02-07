@@ -157,12 +157,27 @@
     })
 
     function addcartpage(index,productdata){
-        let product = productdata.filter((item,i)=>{
-            return i === index
-        })
+        // let product = productdata.filter((item,i)=>{
+        //     return i === index
+        // })
+
+        let prod = productdata[index]
 
         let find = JSON.parse(localStorage.getItem("cart")) || []
-        find.push(product[0])
+        // find.push(product[0])
+
+        let exitingnProduct = find.findIndex(p => p.id == prod.id)
+
+        if(exitingnProduct != -1){
+            find[exitingnProduct].qnty += 1
+        }
+
+
+                
+        else{
+            find.push(prod)
+            prod.qnty = 1
+        }
 
         localStorage.setItem("cart",JSON.stringify(find))
 
