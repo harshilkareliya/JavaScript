@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    let arr = [5,1,2,3,4,7,9,6,4,5,12,45,35,45,78,99]
+
+    function selectionSort(desarray){
+        for(let i =0;i<desarray.length;i++){
+            let lastIndex = desarray.length - i -1
+            let maxIndex = maxValueIndex(desarray,0,lastIndex)
+            let t = desarray[lastIndex]
+            desarray[lastIndex] = desarray[maxIndex]
+            desarray[maxIndex] = t
+        }
+    }
+
+    function maxValueIndex(arry, startIndex,lastIndex){
+        let maxIndex = 0
+        for(let i = startIndex;i<=lastIndex;i++){
+            if(arry[i] < arry[maxIndex]){
+                maxIndex = i
+            }
+        }
+        return maxIndex
+    }
+
+    selectionSort(arr)
+
+    console.log(arr)
+
+</script>

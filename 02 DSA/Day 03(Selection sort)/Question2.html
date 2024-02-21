@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+
+    let arr = [5,3,4,9,8,6,7,5,1,2,3,7,2.2,1,-2,2]
+    console.log(arr)
+    function selectionSort(aecarray){
+        for(let i =0;i<aecarray.length;i++){
+            let firstIndex = aecarray.length - (aecarray.length-i)
+            let minIndex = minValueIndex(aecarray,firstIndex,aecarray.length)
+            console.log(firstIndex,minIndex)
+            let t = aecarray[firstIndex]
+            aecarray[firstIndex] = aecarray[minIndex]
+            aecarray[minIndex] = t
+            console.log(aecarray)
+        }
+        
+    }
+
+    function minValueIndex(arry, startIndex,lastIndex){
+        let minIndex = lastIndex-1
+        for(let i = startIndex;i<=lastIndex;i++){
+            if(arry[i] < arry[minIndex]){
+                minIndex = i
+            }
+        }
+        return minIndex
+    }
+
+    selectionSort(arr)
+
+    console.log(arr)
+
+</script>
