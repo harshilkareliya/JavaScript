@@ -7,7 +7,7 @@ main(){
 	printf("Enter number for Fibonaci :- ");
 	scanf("%d",&n);
 	printf("Fibonaci series :- 0 1 ");
-	for(i=2;i<	n;i++){
+	for(i=2;i<n;i++){
 		sum = first + second;
 		first = second;
 		second = sum;

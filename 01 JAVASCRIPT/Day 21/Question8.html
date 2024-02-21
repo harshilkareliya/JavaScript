@@ -13,9 +13,14 @@
 
     let fruit = ['banana','orange','apple','kiwi','pineapple','grapes']
 
-    let check = fruit.filter((a)=>{
-        return a.length %2 != 0 
+    let check = fruit.map((value)=>{
+        return value
     })
-    console.log(check)
+    let filtered = check.filter((f)=>{
+        return f.length%2!=0
+    })
+
+    console.log(fruit)
+    console.log(filtered)
 
 </script>

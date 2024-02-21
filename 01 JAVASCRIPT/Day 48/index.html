@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -157,14 +156,11 @@
     })
 
     function addcartpage(index,productdata){
-        // let product = productdata.filter((item,i)=>{
-        //     return i === index
-        // })
 
         let prod = productdata[index]
 
-        let find = JSON.parse(localStorage.getItem("cart")) || []
-        // find.push(product[0])
+            let find = JSON.parse(localStorage.getItem("cart")) || []
+        // find.push(product[0])    
 
         let exitingnProduct = find.findIndex(p => p.id == prod.id)
 

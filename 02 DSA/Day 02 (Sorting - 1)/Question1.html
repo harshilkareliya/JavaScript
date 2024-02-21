@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    let arr = [5,3,4,2,1]
+    let t
+
+    function arraysort(arra){
+        for(let i = 0; i<arra.length ;i++){
+            for(let j=0;j<arra.length-1;j++){
+                if(arra[j] > arra[j+1]){
+                    t = arra[j]
+                    arra[j] = arra[j+1]
+                    arra[j+1] = t
+                }
+            }
+        }
+        return arra
+    }
+    console.log(arraysort(arr))
+</script>
