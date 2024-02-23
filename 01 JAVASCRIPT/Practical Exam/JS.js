@@ -1,5 +1,5 @@
 var task = JSON.parse(localStorage.getItem("alltask"))||[]
-
+console.log(task)
 
 function enterdata(){
     let task_name = document.getElementById("task-name").value
@@ -30,21 +30,30 @@ function clear(){
 
 function showdata(){
     document.getElementById("showtask").innerHTML = ""
-    task.map((tasks)=>{
+    task.map((tasks,index)=>{
         let li = document.createElement("li")
         li.setAttribute("id","showli")
         li.innerHTML = `<strong>${tasks.taskname} </strong> - ${tasks.taskdetail} (Priority : ${tasks.taskpriority})`
-        let button = document.createElement("button")
-        button.innerHTML = "Delete"
-        button.setAttribute("id","deletetask")
+        let button = document.createElement("i")
+        button.addEventListener("click",()=>{
+            deletethistask(task,index)
+            showdata()
+        })
+        button.setAttribute("class","bi bi-trash3")
         li.append(button)
         document.getElementById("showtask").append(li)
     })
 }
 
+function deletethistask(arr,index){
+    arr.splice(index,1)
+    localStorage.setItem("alltask",JSON.stringify(arr))
+
+    return arr
+}
+
 function filtertask(){
     let filterpriority = document.getElementById("filterpriority").value
-    console.log(filterpriority)
     if(filterpriority === 'all'){
         showdata()
     }
@@ -68,12 +77,20 @@ function filtertask(){
 
 function showfilterdata(filtered){
     document.getElementById("showtask").innerHTML = ""
-
-    filtered.map((tasks)=>{
+    
+    filtered.map((tasks,index)=>{
         let li = document.createElement("li")
         li.setAttribute("id","showli")
         li.innerHTML = `<strong>${tasks.taskname} </strong> - ${tasks.taskdetail} (Priority : ${tasks.taskpriority})`
-
+        let button = document.createElement("i")
+        let innerindex = filtered[index].index
+        let outerindex = task.findIndex(p => p.index == innerindex)
+        button.addEventListener("click",()=>{
+            deletethistask(task,outerindex)
+            filtertask()
+        })
+        button.setAttribute("class","bi bi-trash3")
+        li.append(button)
         document.getElementById("showtask").append(li)
     })
 }
@@ -81,22 +98,49 @@ function showfilterdata(filtered){
 function showfilterdata2(filtered,filtered2,filtered3){
     document.getElementById("showtask").innerHTML = ""
     
-    filtered.map((tasks)=>{
+    filtered.map((tasks,index)=>{
         let li = document.createElement("li")
         li.setAttribute("id","showli")
         li.innerHTML = `<strong>${tasks.taskname} </strong> - ${tasks.taskdetail} (Priority : ${tasks.taskpriority})`
+        let button = document.createElement("i")
+        let innerindex = filtered[index].index
+        let outerindex = task.findIndex(p => p.index == innerindex)
+        button.addEventListener("click",()=>{
+            deletethistask(task,outerindex)
+            filtertask()
+        })
+        button.setAttribute("class","bi bi-trash3")
+        li.append(button)
         document.getElementById("showtask").append(li)
     })
-    filtered2.map((tasks)=>{
+    filtered2.map((tasks,index)=>{
         let li = document.createElement("li")
         li.setAttribute("id","showli")
         li.innerHTML = `<strong>${tasks.taskname} </strong> - ${tasks.taskdetail} (Priority : ${tasks.taskpriority})`
+        let button = document.createElement("i")
+        let innerindex = filtered2[index].index
+        let outerindex = task.findIndex(p => p.index == innerindex)
+        button.addEventListener("click",()=>{
+            deletethistask(task,outerindex)
+            filtertask()
+        })
+        button.setAttribute("class","bi bi-trash3")
+        li.append(button)
         document.getElementById("showtask").append(li)
     })
-    filtered3.map((tasks)=>{
+    filtered3.map((tasks,index)=>{
         let li = document.createElement("li")
         li.setAttribute("id","showli")
         li.innerHTML = `<strong>${tasks.taskname} </strong> - ${tasks.taskdetail} (Priority : ${tasks.taskpriority})`
+        let button = document.createElement("i")
+        let innerindex = filtered3[index].index
+        let outerindex = task.findIndex(p => p.index == innerindex)
+        button.addEventListener("click",()=>{
+            deletethistask(task,outerindex)
+            filtertask()
+        })
+        button.setAttribute("class","bi bi-trash3")
+        li.append(button)
         document.getElementById("showtask").append(li)
     })
 }

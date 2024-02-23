@@ -22,7 +22,7 @@
     let budjet = []
     for(let i=0;i<book.length;i++){
         if(book[i].price <= 60 && book[i].quantityAvailable > 0){
-            budjet.push(book[i].title)
+            budjet.push(book[i])
         }
     }
     console.log(budjet)

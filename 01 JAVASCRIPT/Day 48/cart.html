@@ -58,7 +58,6 @@ function product(){
             localStorage.setItem("cart",JSON.stringify(cartdata))
             product()
         })
-
         div.append(image,title,price,rate,qnty,removebtn)
         document.querySelector("#filterdcart").append(div)
 

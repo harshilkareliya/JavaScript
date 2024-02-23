@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+const dayValue = [7,5, 3,1, 6, 4,10];
+
+if(dayValue.length != 0){
+    let Profit = myProfit(dayValue);
+    console.log("Profit : ",Profit)
+}
+else{
+    console.log(0)
+}
+
+function myProfit(value) {
+    console.log(value)
+
+    let minnum = Math.min(...value)
+    console.log(minnum)
+
+        let minnumIndex
+        for(let i=0;i<value.length;i++){
+            if(value[i] === minnum){
+                minnumIndex = i
+            }
+        }
+        console.log(minnumIndex)
+
+        if(minnumIndex === value.length-1){
+            return 0
+        } else{
+            let maxvalue = 0
+            for(let i=minnumIndex+1;i<value.length;i++){
+                // console.log(i)
+                if(value[i] > maxvalue){
+                    maxvalue = value[i]
+                }
+            }
+            return maxvalue-minnum
+        }
+}
+
+</script>

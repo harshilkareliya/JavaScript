@@ -59,3 +59,8 @@
     color: white;
     /* font-weight: bold; */
 }
+.bi-trash3{
+    /* color: red; */
+    float: right;
+    cursor: pointer;
+}

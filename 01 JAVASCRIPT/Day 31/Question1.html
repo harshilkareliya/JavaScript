@@ -12,24 +12,26 @@
 </html>
 <script>
 
-    let email = document.querySelector('#email').value
+    
     document.querySelector('#btn').addEventListener("click",check)
+
     function emailcheck(email){
         if(!email.includes('@')){
             // console.log("Successfully entered email")
             throw new Error("You are missing @")
-        }
+        } 
         else{
             document.write("Successfully entered email")
         }
     }
 
     function check(){
+        let email = document.querySelector('#email').value
         try{
             emailcheck(email)
         }
         catch(err){
-            document.write("Missing ",err.message)
+            alert(err.message)
         }
     }
 

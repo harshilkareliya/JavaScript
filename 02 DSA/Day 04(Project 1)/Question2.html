@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    
+</body>
+</html>
+<script>
+
+    let a = [5,1,5,3,4,6,7,9,2]
+
+    function bubblesort(a){
+        for(let i=0;i < a.length;i++){
+            for(let j=0; j<a.length-1;j++){
+                if(a[j] > a[j+1]){
+                    let t = a[j]
+                    a[j] = a[j+1]
+                    a[j+1] = t
+                }
+            }
+        }
+        return a
+    }
+
+    console.log(bubblesort(a))
+</script>
