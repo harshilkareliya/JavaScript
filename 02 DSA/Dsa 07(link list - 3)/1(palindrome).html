@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    function linkList(value){
+        this.value = value 
+        this.next = null
+    }
+
+    list1 = new linkList('A')
+    list2 = new linkList('K')
+    list3 = new linkList('N')
+    list4 = new linkList('K')
+    list5 = new linkList('A')
+
+    list1.next = list2
+    list2.next = list3
+    list3.next = list4
+    list4.next = list5
+
+    function pali(node){
+        let now = node
+        let arr = []
+        while(now != null){
+            arr.push(now.value)
+            now = now.next
+        }
+        return arr.join('') === arr.reverse().join('')
+    }
+
+    console.log(pali(list1))
+
+</script>

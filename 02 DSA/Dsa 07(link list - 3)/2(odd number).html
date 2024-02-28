@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+function linkList(value){
+        this.value = value 
+        this.next = null
+    }
+
+    list1 = new linkList(10)
+    list2 = new linkList(100)
+    list3 = new linkList(99)
+    list4 = new linkList(153)
+    list5 = new linkList(652)
+
+    list1.next = list2
+    list2.next = list3
+    list3.next = list4
+    list4.next = list5
+
+    function midMode(value){
+        let slow = value
+        let fast = value
+
+        while(fast.next != null){
+            slow = slow.next
+            fast = fast.next.next
+        }
+
+        return slow.value
+    }
+
+    console.log(midMode(list1))
+
+
+</script>
