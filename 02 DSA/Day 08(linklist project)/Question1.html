@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    function creteLinklist(val){
+        this.node = val
+        this.next = null
+    }
+
+    let flist1 = new creteLinklist(1)
+    let flist2 = new creteLinklist(3)
+    let flist3 = new creteLinklist(5)
+
+    let slist1 = new creteLinklist(2)
+    let slist2 = new creteLinklist(4)
+    let slist3 = new creteLinklist(6)
+
+    // merge 2 list
+    flist1.next = slist1
+    slist1.next = flist2
+    flist2.next = slist2
+    slist2.next = flist3
+    flist3.next = slist3
+
+    let output = flist1
+    while(output != null){
+        console.log(output.node)
+        output = output.next
+    }
+
+</script>

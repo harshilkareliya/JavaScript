@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    function creteLinklist(val){
+        this.node = val
+        this.next = null
+    }
+    let list1 = new creteLinklist(1)
+    let list2 = new creteLinklist(2)
+    let list3 = new creteLinklist(3)
+    let list4 = new creteLinklist(4)
+    let list5 = new creteLinklist(5)
+
+    list1.next = list2
+    list2.next = list3
+    list3.next = list4
+    list4.next = list5
+
+    let alllist = list1
+    let n = 2
+    let nodelength = 5
+
+    removeElement(alllist,n,nodelength)
+    
+    function removeElement(lists,remove,totalnode){
+        let n = remove
+        let cout = totalnode
+        let step = lists
+        while(step != null){
+            if(cout === n){
+                step = step.next
+            }
+            else{
+                console.log(step.node)
+                step = step.next
+            }
+            cout--
+        }
+    }
+
+    
+
+</script>
