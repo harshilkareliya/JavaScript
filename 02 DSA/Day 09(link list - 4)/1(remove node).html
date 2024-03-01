@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    function creteNode(node){
+        this.node = node
+        this.next = null
+    }
+
+    let list1 = new creteNode(1)
+    let list2 = new creteNode(22)
+    let list3 = new creteNode(333)
+    let list4 = new creteNode(4444)
+    let list5 = new creteNode(55555)
+
+    list1.next = list2
+    list2.next = list3
+    list3.next = list4
+    list4.next = list5
+
+    function remove(at){
+        at.node = at.next.node
+        at.next = at.next.next
+    }
+    remove(list3)
+    let present = list1
+    while(present != null){
+        console.log(present.node)
+        present = present.next
+    }
+
+</script>

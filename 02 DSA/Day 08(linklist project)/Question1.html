@@ -25,17 +25,20 @@
     let slist2 = new creteLinklist(4)
     let slist3 = new creteLinklist(6)
 
-    // merge 2 list
-    flist1.next = slist1
-    slist1.next = flist2
-    flist2.next = slist2
-    slist2.next = flist3
-    flist3.next = slist3
+    flist1.next = flist2
+    flist2.next = flist3
+    slist1.next = slist2
+    slist2.next = slist3
+    
 
-    let output = flist1
-    while(output != null){
-        console.log(output.node)
-        output = output.next
+    let now1 = flist1
+    let now2 = slist1
+
+    while(now2 != null){
+        console.log(now1.node)
+        console.log(now2.node)
+        now1 = now1.next
+        now2 = now2.next
     }
 
 </script>

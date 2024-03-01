@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    
+    function creteNode(node){
+        this.node = node
+        this.next = null
+    }
+
+    let list1 = new creteNode(11111)
+    let list2 = new creteNode(2222)
+    let list3 = new creteNode(333)
+    let list4 = new creteNode(44)
+    let list5 = new creteNode(5)
+
+    list1.next = list2
+    list2.next = list3
+    list3.next = list4
+    list4.next = list5
+
+    function reverse(at){
+        let cur = at
+        let prev = null
+
+        while(cur != null){
+            let newNode = cur.next
+            cur.next = prev
+            prev = cur
+            cur = newNode
+        }
+        return prev
+    }
+
+    let reverseNode = reverse(list1)
+
+    while(reverseNode != null){
+        console.log(reverseNode.node)
+        reverseNode = reverseNode.next
+    }
+
+
+</script>
