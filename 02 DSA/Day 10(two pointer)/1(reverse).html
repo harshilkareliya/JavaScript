@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    let arr = [9, 10, 12, 15, 18]
+
+    let start = 0
+    let end = arr.length-1
+
+    while(start < end){
+        let tem = arr[start]
+        arr[start] = arr[end]
+        arr[end] = tem
+        start++
+        end--
+    }
+    console.log(arr)
+
+</script>
