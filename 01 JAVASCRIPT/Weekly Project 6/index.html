@@ -32,34 +32,52 @@
             <option value="Mexican">Mexican</option>
             <option value="Greek cuisine">Greek cuisine</option>
         </select><br><br>
+        <input type="file" id="add_image" accept="image/*" onclick="inputimage()"><br><br>
         <button onclick="add_data()">Add recipe</button>
     </div>
     </center>
 
 </body>
 </html>
-<script type="module">
+<!-- <script type="module">
     import{header} from './header.js'
 
     document.addEventListener("DOMContentLoaded",()=>{
         header()
     })
 
-</script>
+</script> -->
 <!-- <script src="JS.js"></script> -->
 <script>
 var all_recipe = JSON.parse(localStorage.getItem("recipe_data")) || []
 
-    function add_data(){
-    
+var img = document.getElementById("add_image")
+var sl = null;
+
+    function inputimage(){
+        let file = img.files;
+        if(file.length>0){
+            let filereader = new FileReader();
+            filereader.onload = function(event){
+                preview.setAttribute('src',event.target.result)
+            }
+            filereader.readAsDataURL(file[0])
+        }
+    }
+
+
+function add_data(){ 
     var add_title = document.getElementById("add_title").value
     var add_ingredients = document.getElementById("add_ingredients").value
     var add_instructions = document.getElementById("add_instructions").value
     var add_cuisine = document.getElementById("add_cuisine").value
+    // var img = "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg" 
+    let image = document.getElementById("add_image")
     var index = all_recipe.length+1
 
     var add_recipe = {
         id : index,
+        image : image.files[0].name,
         title : add_title,
         ingredients : add_ingredients,
         instructions : add_instructions,
@@ -69,16 +87,16 @@ var all_recipe = JSON.parse(localStorage.getItem("recipe_data")) || []
     all_recipe.push(add_recipe)
     localStorage.setItem("recipe_data",JSON.stringify(all_recipe))
     
-    console.log(add_recipe)
+    // console.log(add_recipe)
     clear()
 }
 
 function clear(){
+    var img = document.getElementById("add_image").value = ""
     var add_title = document.getElementById("add_title").value = ""
     var add_ingredients = document.getElementById("add_ingredients").value = ""
     var add_instructions = document.getElementById("add_instructions").value = ""
     var add_cuisine = document.getElementById("add_cuisine").value = "not selected"
 }
 
-
-</script>
+</script>   

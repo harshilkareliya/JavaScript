@@ -85,6 +85,7 @@ function showfilterdata(filtered){
         let button = document.createElement("i")
         let innerindex = filtered[index].index
         let outerindex = task.findIndex(p => p.index == innerindex)
+        console.log(innerindex,outerindex)
         button.addEventListener("click",()=>{
             deletethistask(task,outerindex)
             filtertask()

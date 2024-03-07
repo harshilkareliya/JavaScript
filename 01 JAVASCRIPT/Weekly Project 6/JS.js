@@ -1,11 +1,17 @@
 var all_recipe = JSON.parse(localStorage.getItem("recipe_data")) || []
 console.log(all_recipe)
 
+
 function showRecipe(){
     document.getElementById("show_recipe").innerHTML = ""
     all_recipe.map((recipes,index)=>{
         let main_sec = document.createElement("div")
         main_sec.setAttribute("id","main_sec")
+        let image = document.createElement("img")
+        image.setAttribute("id","recipe_image")
+        image.setAttribute("src",recipes.image)
+
+
         let name = document.createElement("div")
         name.setAttribute("id","recipe_name")
         name.append(recipes.title)
@@ -35,7 +41,7 @@ function showRecipe(){
             showRecipe()
         })
         edit_sec.append(edit,remove)
-        main_sec.append(name,Ingred,Instruct,cuise,edit_sec)
+        main_sec.append(image,name,Ingred,Instruct,cuise,edit_sec)
         document.getElementById("show_recipe").append(main_sec)
     })
 
@@ -67,9 +73,9 @@ function filter_recipe(){
     }
 }
 
-function displayFiltered_recipe(all_recipe){
+function displayFiltered_recipe(filterRecipe){
     document.getElementById("show_recipe").innerHTML = ""
-    all_recipe.map((recipes,index)=>{
+    filterRecipe.map((recipes,index)=>{
         let main_sec = document.createElement("div")
         main_sec.setAttribute("id","main_sec")
         let name = document.createElement("div")
@@ -95,24 +101,17 @@ function displayFiltered_recipe(all_recipe){
         edit.setAttribute("class","bi bi-pencil-square") 
         let remove = document.createElement("i")
         remove.setAttribute("class","bi bi-x-lg") 
+        let innerid = filterRecipe[index].id
+        let outerindex = all_recipe.findIndex(ft => ft.id === innerid)
         remove.addEventListener("click",()=>{
-            delete_recipe(all_recipe,index)
-            showRecipe()
+            console.log(delete_recipe(all_recipe,outerindex))
+            filter_recipe()
         })
         edit_sec.append(edit,remove)
         main_sec.append(name,Ingred,Instruct,cuise,edit_sec)
         document.getElementById("show_recipe").append(main_sec)
     })
 }
-
-
-
-
-
-
-
-
-
 
 
 
