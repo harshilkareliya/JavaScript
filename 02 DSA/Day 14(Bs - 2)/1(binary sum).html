@@ -11,14 +11,13 @@
 </html>
 <script>
 
-    let num = [2,7,11,15]
-    let target = 9
+    let num = [3,2,4]
+    let target = 6
     console.log(targetSum(num,target))
-    // targetSum(num,target)
+
     function targetSum(arr,tar){
         let start = 0
         let end = arr.length-1
-        console.log(start,end)
 
         while(start < end){
             let sum = arr[start]+arr[end]
