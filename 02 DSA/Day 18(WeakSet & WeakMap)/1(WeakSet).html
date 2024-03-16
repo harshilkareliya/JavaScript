@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+
+    let Weak = new WeakSet()
+    let i = 0
+    let object1 = {"id":++i}
+    let object2 = {"id":++i}
+    let object3 = {"id":++i}
+    Weak.add(object1)
+    Weak.add(object2)
+    Weak.add(object3)   
+    Weak.delete(object1)
+    console.log(Weak)
+    console.log(Weak.has(object1))
+    console.log(Weak.has(object2))
+    
+
+</script>

@@ -43,3 +43,53 @@
     height: 30px;
     font-size: 18px;
 }
+
+
+#table{
+    /* border: 1px solid black; */
+}
+#tableRow{
+    margin-top: 100px;
+    /* width: 500px; */
+}
+#tableRow a{
+    line-height: 50px;
+    margin-left: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    color: blue;
+    /* background-color: #fff; */
+}
+#tableName,#tableNameP{
+    width: 200px;
+    padding: 10px;
+    /* background-color: aqua; */
+    padding: 10px;
+    border: 1px solid gray;
+}
+#tableEmail,#tableEmailP{
+    width: 350px;
+    /* background-color: aqua; */
+    padding: 10px;
+    border: 1px solid gray;
+    
+}
+#tableField,#tableFieldP{
+    width: 150px;
+    padding: 10px;
+    /* background-color: aqua; */
+    border: 1px solid gray;
+
+}
+#tableSalary,#tableSalaryP{
+    width: 150px;
+    /* background-color: aqua; */
+    padding: 10px;
+    border: 1px solid gray;
+
+}
+#tableDelete{
+    color: blue;
+    cursor: pointer;
+    padding: 10px;
+}

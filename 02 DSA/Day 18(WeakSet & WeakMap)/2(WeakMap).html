@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+
+    let mapWeak = new WeakMap()
+    let i = 100
+    let object1 = {"id":++i}
+    let object2 = {"id":++i}
+    let object3 = {"id":++i}
+
+    mapWeak.set(object1,"start")
+    mapWeak.set(object2,"second")
+    mapWeak.set(object3,"third")   
+
+    mapWeak.delete(object1)
+    console.log(mapWeak)
+    console.log(mapWeak.has(object1))
+    console.log(mapWeak.has(object2))
+    
+    
+
+</script>

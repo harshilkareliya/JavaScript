@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    let string = 'hello'
+    let myStack = []
+
+    for(let i=0;i<string.length;i++){
+        myStack.push(string[i])
+    }
+    console.log(myStack)
+
+    let out = ''
+    for(let i=myStack.length;i>0;i--){
+        out+=myStack.pop()
+    }
+    console.log(out)
+</script>

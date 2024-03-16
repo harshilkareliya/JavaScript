@@ -39,20 +39,19 @@
 
 </body>
 </html>
-<!-- <script type="module">
+<script type="module">
     import{header} from './header.js'
 
     document.addEventListener("DOMContentLoaded",()=>{
         header()
     })
 
-</script> -->
+</script>
 <!-- <script src="JS.js"></script> -->
 <script>
 var all_recipe = JSON.parse(localStorage.getItem("recipe_data")) || []
 
 var img = document.getElementById("add_image")
-var sl = null;
 
     function inputimage(){
         let file = img.files;
