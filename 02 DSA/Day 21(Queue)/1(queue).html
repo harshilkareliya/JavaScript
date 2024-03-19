@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    class Queue{
+        constructor(){
+            this.qu = []
+        }
+
+        enquue(el){
+            this.qu.push(el)
+        }
+        dequeue(){
+            if(this.isEmpty()){
+                return "Queue is empty"
+            }
+            else{
+                return this.qu.shift()
+            }
+        }
+        size(){
+            return this.qu.length
+        }
+        isEmpty(){
+            return this.qu.length === 0
+        }
+        front(){
+            return this.qu[0]
+        }
+    }
+
+    let q1 = new Queue
+
+    console.log(q1.dequeue())
+    q1.enquue(50)
+    q1.enquue(20)
+    q1.enquue(10)
+    q1.enquue(60)
+    q1.enquue(55)
+    console.log("Size :- ",q1.size())
+    console.log(q1)
+    console.log("Removed Element :- ",q1.dequeue())
+    console.log(q1)
+    console.log("Size :- ",q1.size())
+
+</script>
