@@ -1,0 +1,883 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    height: 180px;
+    /* border: 1px solid black; */
+    
+}
+.head{
+    height: 100px;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    background-color: #F8F8F8;
+    /* justify-content: space-evenly; */
+}
+.logo{
+    flex-basis: 40%;
+}
+.logo2{
+    flex-basis: 60%;
+    /* border: 1px solid black; */
+    height: 100px;
+    display: flex;
+}
+.logo2a{
+    width: 30%;
+    /* display: inline-block; */
+    /* border: 1px solid black; */
+    height: 100px;
+    display: flex;
+    align-items: center;
+    /* text-align: center; */
+}
+.logo2a1{
+    
+    /* border: 1px solid black; */
+    /* height: 100px;   */
+}
+.logo2a1 i{
+    font-size: 40px;
+    color: #00BCD4;
+    margin-right: -20px;
+}
+.logo2a1 p{
+    font-weight: bold;
+    color: rgb(146, 144, 144);
+}
+.mainnav{
+    background-color: transparent;
+    height: 100px;
+}
+.nav-item a{
+    color: black;
+    font-weight: 500;
+    font-size: 18px;
+    margin-right: 15px;
+}
+.appobtn{
+    background-color: #00BCD4;
+    border: 1px solid #00BCD4;
+    padding: 20px 20px;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+
+.slider1{
+    height: 800px;
+}
+.slider1a{
+    height: 800px;
+}
+.carousel-item img{
+    height: 100%;
+}
+.slider1text{
+    height: 100%;
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.247);
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    padding-top: 15%;
+    padding-left: 10%;
+}
+.subslider1text h1{
+    width: 70%;
+    font-size: 65px;
+    color: white;
+}
+.subslider1text p{
+    width: 70%;
+    font-size: 20px;
+    color: white;
+}
+.subslider1text button{
+    background-color: #00BCD4;
+    padding: 15px 25px;
+    color: white;
+    border: 1px solid #00BCD4;
+    border-radius: 5px;
+}
+
+
+
+
+
+.contact{
+    height: 900px;
+    /* border: 1px solid black; */
+    display: flex;
+    margin-top: 100px;
+}
+.appoitment{
+    height: inherit;
+    /* border: 1px solid black; */
+    flex-basis: 50%;
+    background-color: #00BCD4;
+    color: white;
+}
+.appoitment form{
+    width: 65%;
+    /* border: 1px solid black; */
+    float: right;
+    margin-top: 100px;
+}
+.appoitment form input{
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    width: 90%;
+}
+.appoitment form select{
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    width: 90%;
+}
+.appoitment form select option{
+    background-color: black;
+}
+.appoitment form button{
+    width: 95%;
+    padding: 12px 0px;
+    border-radius: 5px;
+    border: none;
+    color: #00BCD4;
+    font-weight: 600;
+}
+.offer{
+    height: inherit;
+    /* border: 1px solid black; */
+    flex-basis: 50%;
+    background-color: #F8F8F8;
+    padding: 90px 60px;
+}
+.suboffer1{
+    width: 70%;
+    height: 150px;
+    background-color: white;
+}
+.suboffer1:hover{
+    background-color: #00BCD4;
+    /* color: white; */
+}
+.suboffer1a{
+    float: left;
+    width: 20%;
+    height: inherit;
+    /* border: 1px solid black; */
+    text-align: center;
+}
+.suboffer1a{
+    font-size: 55px;
+    color: #00BCD4;
+    line-height: 150px;
+}
+.suboffer1b{
+    float: left;
+    width: 78%;
+    margin-left: 2%;
+    height: inherit;
+    /* border: 1px solid black; */
+}
+.suboffer1b h5{
+    color: black;
+}
+.suboffer1b p{
+    margin-top: 15px;
+    color: gray;
+    font-weight: 400;
+}
+.suboffer1:hover .suboffer1a{
+    color: white;
+}
+.suboffer1:hover .suboffer1b h5{
+    color: white;
+}
+.suboffer1:hover .suboffer1b p{
+    color: white;
+}
+
+
+
+
+.services{
+    height: auto;
+    text-align: center;
+    background-color: #F8F8F8;
+    padding-bottom: 50px;
+}
+.services h1{
+    padding: 50px 0px;
+}
+.subservices{
+    /* border: 1px solid black; */
+    width: 70%;
+    margin-left: 15%;
+    height: 780px;
+}
+.service1{
+    height: 350px;
+    /* border: 1px solid black; */
+}
+.subservice1{
+    width: 97%;
+    background-color: white;
+    height: inherit;
+    /* border: 1px solid black ; */
+    margin-left: 1.5%;
+    text-align: center;
+    padding: 40px 5px;
+}
+.subservice1:hover{
+    background-color: #00BCD4;
+}
+.subservice1:hover i{
+    background-color: white;
+    color: #00BCD4;
+}
+.subservice1:hover h5{
+    color: white;
+}
+.subservice1 i{
+    font-size: 50px;
+    color: white;
+    background-color: #00BCD4;
+    padding: 25px;
+    border-radius: 50%;
+}
+.subservice1 h5{
+    font-weight: 700;
+}
+.subservice1 p{
+    font-size: 17px;
+    font-weight: 500;
+    color: gray;
+}
+
+
+.clinic{
+    height: 700px;
+    display: flex;
+    background-color: #F8F8F8;
+}
+.clinicpic{
+    flex-basis: 50%;
+    height: inherit;
+    /* border: 1px solid black; */
+}
+.clinicpic img{
+    height: 100%;
+    width: 70%;
+    float: right;
+}
+.clinicreport{
+    flex-basis: 50%;
+    height: inherit;
+    /* border: 1px solid black; */
+}
+.report1{
+    width: 50%;
+    height: 200px;
+    /* border: 1px solid black; */
+    background-color: #fff;
+    margin-top: 22px;
+    margin-left: 10%;
+    border-radius: 15px;
+    text-align: center;
+}
+.report1 i{
+    font-size: 40px;
+}
+.report1 h2{
+    font-size: 50px;
+}
+
+
+
+.result{
+    height: 600px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.result1{
+    height: 400px;
+    flex-basis: 25%;
+    /* border: 1px solid black; */
+    position: relative;
+    z-index: 0;
+    transition: 1s;
+}
+.subresult{
+    height: auto;
+}
+.result1 img{
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+}
+.result1 div{
+    width: 100%;
+    height: auto;
+    background-color: rgba(240, 248, 255, 0.301);
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    padding: 15px 0px;
+    display: none;
+    transition: 1s;
+}
+.result1:hover div{
+    display: block;
+}
+
+
+
+
+
+
+
+footer{
+    height: 500px;
+    background-color: #00bbd479;
+    background-image: linear-gradient(rgba(134, 223, 235, 0.938),rgba(134, 223, 235, 0.699)),url(../image/slider1a.webp);
+    background-position: center;
+}
+.foot1{
+    flex-basis: 25%;
+    /* border: 1px solid white; */
+    height: 350px;
+    color: white;
+}
+.foot1 i{
+    font-size: 23px;
+    padding: 10px 13px;
+    background-color: #00BCD4;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.foot2{
+    flex-basis: 20%;
+    height: 350px;
+    /* border: 1px solid white; */
+    color: white;
+}
+.foot2 a{
+    text-decoration: none;
+    color: white    ;
+    font-weight: bolder;
+    line-height: 40px;
+}
+
+
+
+
+@media(max-width:992px){
+    .logo{
+        flex-basis: 30%;
+    }
+
+    .logo2{
+        flex-basis: 70%;
+    }
+    .logo2a{
+        /* width: auto; */
+    }
+    .appobtn{
+            padding: 0px 0px;
+    }
+
+
+    .contact{
+        /* flex-direction: column; */
+        margin-top: 0;
+        height: auto;
+    }
+    .appoitment{
+        height: auto;
+        padding-bottom: 20px;
+    }
+    .appoitment form{
+        width: 100%;
+        float: left;
+        padding: 20px 20px;
+        height: auto;
+    }
+    .appoitment form textarea{
+        width: 100%;
+    }
+    .appoitment form button{
+        width: 100%;
+    }
+    .offer{
+        height: auto;
+        padding: 120px 10px;
+    }
+    .suboffer1{
+        width: 100%;
+    }
+    .suboffer1a{
+        width: 20%;
+        font-size: 50px;
+    }
+    .suboffer1b{
+        width: 78%;
+    }
+    .services{
+        height: auto;
+    }
+    .subservices{
+        height: auto;
+    }
+    .service1{
+        height: auto;
+    }
+
+
+    .report1{
+        width: 80%;
+        height: auto;
+    } 
+}
+@media(max-width:768px){
+    header{
+        height: auto;
+    }
+    .head{
+        height: auto;
+    }
+    .logo{
+        flex-basis: 20%;
+    }
+    .mainnav{
+        height: auto;
+        background-color: #00BCD4;
+    }
+    .logo2{
+        flex-basis: 80%;
+    }
+    .logo2a{
+        width: auto;
+    }
+        #menu{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .appobtn{
+        position: absolute;
+        top: 0;
+        left: 30%;
+        padding: 10px 10px;
+        background-color: white;
+        color: #00BCD4;
+    }
+    .slider1{
+        height: auto;
+        margin-top: 30px;
+        /* display: none; */
+    }
+    .slider1a{
+        height: auto;
+        /* display: none; */
+    }
+    .slider1text{
+        padding-top: 35%;
+    }
+    .subslider1text{
+        width: 200%;
+    }
+    .subslider1text h1{
+        width: 100%;
+    }
+    .subslider1text p{
+        width: 100%;
+    }
+
+
+
+    .contact{
+        flex-direction: column;
+        margin-top: 0;
+    }
+    .appoitment{
+        height: auto;
+        padding-bottom: 20px;
+    }
+    .appoitment form{
+        float: left;
+        padding: 0px 20px;
+        height: auto;
+    }
+    .appoitment form textarea{
+        width: 90%;
+    }
+    .appoitment form button{
+        width: 90%;
+    }
+    .suboffer1{
+        width: 100%;
+    }
+    .suboffer1a{
+        width: 20%;
+        font-size: 50px;
+    }
+    .suboffer1b{
+        width: 78%;
+    }
+    .services{
+        height: auto;
+    }
+    .subservices{
+        height: auto;
+    }
+    .service1{
+        height: auto;
+    }
+
+    .result{
+        height: auto;
+        padding-bottom: 20px;
+        /* border: 1px solid red; */
+    }
+    .subresult{
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+        height: 100vh;
+        /* border: 3px solid yellow; */
+    }
+    .result1{
+        height: auto; 
+        flex-basis: 50%;
+    }
+
+
+    .clinic{
+        /* flex-direction: column; */
+        height: auto;
+    }
+    .clinicpic{
+        /* height: 400px; */
+    }
+    .clinicpic img{
+        height: 100%;
+        width: 100%;
+    }
+    .clinicreport{
+        padding-bottom: 50px;
+    }
+    .report1{
+        width: 80%;
+        height: auto;
+    } 
+}
+
+@media(max-width:576px){
+    header{
+        height: auto;
+    }
+    .head{
+        align-items: start;
+        flex-direction: column;
+        height: auto;
+        position: relative;
+    }
+    .logo2{
+        flex-direction: column;
+    }
+    .logo2a{
+        width: auto;
+        height: 70px;
+    }
+    .mainnav{
+        height: auto;
+        /* height: 50px; */
+        background-color: #00BCD4;
+
+    }
+    .navbar{
+        height: auto;
+    }
+        #menu{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .appobtn{
+        position: absolute;
+        top: 0;
+        left: 30%;
+        padding: 10px 10px;
+        background-color: white;
+        color: #00BCD4;
+    }
+    .slider1{
+        height: auto;
+        margin-top: 30px;
+        /* display: none; */
+    }
+    .slider1a{
+        height: auto;
+        /* display: none; */
+    }
+    .slider1text{
+        width: 100%;
+        background-color: none;
+        padding-top: 40%;
+    }
+    .subslider1text h1{
+        width: 100%;
+    }
+    .subslider1text p{
+        width: 100%;
+    }
+
+
+    .contact{
+        flex-direction: column;
+        margin-top: 0;
+    }
+    .appoitment{
+        height: auto;
+        padding-bottom: 20px;
+    }
+    .appoitment form{
+        float: left;
+        padding: 0px 20px;
+        height: auto;
+    }
+    .appoitment form textarea{
+        width: 90%;
+    }
+    .appoitment form button{
+        width: 90%;
+    }
+    .suboffer1{
+        width: 100%;
+    }
+    .suboffer1a{
+        width: 15%;
+        font-size: 40px;
+    }
+    .suboffer1b{
+        width: 83%;
+    }
+    .services{
+        height: auto;
+    }
+    .subservices{
+        height: auto;
+    }
+    .service1{
+        height: auto;
+    }
+
+    .clinic{
+        flex-direction: column;
+        height: auto;
+    }
+    .clinicpic{
+        height: 400px;
+    }
+    .clinicpic img{
+        height: 100%;
+        width: 100%;
+    }
+    .clinicreport{
+        padding-bottom: 50px;
+    }
+    .report1{
+        width: 80%;
+        height: auto;
+    } 
+
+
+
+    
+    .result{
+        height: auto;
+        padding-bottom: 20px;
+        /* border: 1px solid red; */
+    }
+    .subresult{
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+        height: 100vh;
+        /* border: 3px solid yellow; */
+    }
+    .result1{
+        height: auto; 
+        flex-basis: 50%;
+    }
+
+
+
+    footer{
+        height: auto;
+    }
+    .footer{
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .foot1{
+        flex-basis: 50%;
+    }
+    .foot2{
+        margin-top: 20px;
+        flex-basis: 50%;
+    }  
+}
+@media(max-width:480px){
+    header{
+        height: auto;
+    }
+    .head{
+        align-items: start;
+        flex-direction: column;
+        height: auto;
+        position: relative;
+    }
+    .logo{
+        height: auto;
+    }
+    .logo2{
+        flex-direction: column;
+        height: auto;
+    }
+    .logo2a{
+        width: auto;
+        height: 70px;
+    }
+
+    .mainnav{
+        height: auto;
+        /* height: 50px; */
+        background-color: #00BCD4;
+
+    }
+    .navbar{
+        height: auto;
+    }
+    #menu{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .appobtn{
+        position: absolute;
+        top: 0;
+        left: 30%;
+        padding: 10px 10px;
+        background-color: white;
+        color: #00BCD4;
+    }
+    .slider1{
+        height: auto;
+        margin-top: 30px;
+        /* display: none; */
+    }
+    .slider1a{
+        height: auto;
+        /* display: none; */
+    }
+    .slider1text{
+        width: 100%;
+        background-color: none;
+        padding-top: 40%;
+    }
+    .subslider1text h1{
+        width: 100%;
+    }
+    .subslider1text p{
+        width: 100%;
+    }
+
+    .contact{
+        flex-direction: column;
+        margin-top: 0;
+    }
+    .appoitment{
+        padding-bottom: 20px;
+    }
+    .appoitment form{
+        float: left;
+        padding: 10px;
+    }
+    .suboffer1{
+        width: 100%;
+    }
+    .suboffer1a{
+        width: 15%;
+        font-size: 40px;
+    }
+    .suboffer1b{
+        width: 83%;
+    }
+
+
+    .clinic{
+        flex-direction: column;
+        height: auto;
+    }
+    .clinicpic{
+        height: 400px;
+    }
+    .clinicpic img{
+        height: 100%;
+        width: 100%;
+    }
+    .clinicreport{
+        padding-bottom: 50px;
+    }
+    .report1{
+        width: 80%;
+        height: auto;
+    }
+
+
+    .result{
+        height: auto;
+        padding-bottom: 20px;
+        /* border: 1px solid red; */
+    }
+    .subresult{
+        flex-direction: column;
+        height: 100vh;
+        /* border: 3px solid yellow; */
+    }
+    .result1{
+        height: auto; 
+    }
+    
+
+
+
+    footer{
+        height: auto;
+        margin-top: 850px;
+    }
+    .footer{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .foot1{
+        width: 50%;
+    }
+    .foot2{
+        margin-top: 20px;
+        width: 50%;
+    }
+}

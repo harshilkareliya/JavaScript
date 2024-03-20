@@ -78,6 +78,7 @@ function addBookmark(index){
             let bookmarkSalary = bookmarkMap.salary
 
             const userData = {
+                id : bookmark.length-1,
                 name : bookmarkName,
                 email : bookmarkEmail,
                 field : bookmarkField,
