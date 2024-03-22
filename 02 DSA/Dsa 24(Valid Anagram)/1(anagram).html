@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    let a = "anagram", b = "nargaam"
+    console.log(isAnagram(a,b))
+    function isAnagram(f,s){
+        if(f.length != s.length){
+            return false
+        }
+        
+        let stack1 = [],stack2 = []
+        for(let i=0;i<f.length;i++){
+            stack1.push(f[i])
+            stack2.push(s[i])
+        }
+
+        let check1 = stack1.slice().sort((a,b)=>a.localeCompare(b))
+        let check2 = stack2.slice().sort((a,b)=>a.localeCompare(b))
+        
+        let s1 = check1.toString()
+        let s2 = check2.toString()
+        
+        return s1 === s2
+    }
+
+</script>
