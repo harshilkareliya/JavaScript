@@ -11,7 +11,7 @@
 </html>
 <script>
 
-    let a = "anagram", b = "nargaam"
+    let a = "anagram", b = "anagmar"
     console.log(isAnagram(a,b))
     function isAnagram(f,s){
         if(f.length != s.length){
@@ -24,13 +24,10 @@
             stack2.push(s[i])
         }
 
-        let check1 = stack1.slice().sort((a,b)=>a.localeCompare(b))
-        let check2 = stack2.slice().sort((a,b)=>a.localeCompare(b))
+        let check1 = stack1.sort().join('')
+        let check2 = stack2.sort().join('')
         
-        let s1 = check1.toString()
-        let s2 = check2.toString()
-        
-        return s1 === s2
+        return check1 === check2
     }
 
 </script>
